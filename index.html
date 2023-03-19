@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    @font-face{
+      font-display:swap;
+      font-family: Canva Sans;
+      font-style:normal;
+      font-weight:400 700;
+      src:url(https://static.canva.com/web/images/a9b8e7902ec1ab885d382156f33738e5.woff2) format("woff2"),
+          url(https://static.canva.com/web/images/013277426f0d555d96c7a75503df5754.woff) format("woff");
+      unicode-range:
+        u+00b1-00b3,u+00b9,u+00bc-00be,u+0394,u+03a9,u+03bc,u+03c0,u+2044,u+2070,u+2074-2089,u+2126,u+212e,u+2153-2154,u+215b-215e,u+2202,u+2206,u+220f,u+2211-2212,u+2215,u+2219,u+221a,u+221e,u+222b,u+2248,u+2260,u+2264-2265,u+25ca
+    }
+    @font-face{
+      font-display:swap;
+      font-family:Canva Sans;
+      font-style:normal;
+      font-weight:400 700;
+      src:url(https://static.canva.com/web/images/d97a6ffa507b670a5b1664f98fc1183d.woff2) format("woff2"),
+          url(https://static.canva.com/web/images/1de7434d86166b0614ff3d61cda11a54.woff) format("woff");
+      unicode-range:u+00a1,u+00aa-00ab,u+00af,u+00b8,u+00ba-00bb,u+00bf,u+00c0-00d6,u+00d8-00f6,u+00f8-0148,u+014a-017e,u+0192,u+01b5-01b6,u+01fc-01fd,u+0218-021b,u+0237,u+02c6-02c7,u+02c9,u+02d8-02dd,u+1e80-1e85,u+1e9e,u+1ef2-1ef3,u+2030,u+2039-203a,u+20ac,u+20ba,u+2113
+    }
+    @font-face{
+      font-display:swap;
+      font-family:Canva Sans;
+      font-style:normal;
+      font-weight:400 700;
+      src:url(https://static.canva.com/web/images/cff149ee1e9d2be50ac77bcd86769d05.woff2) format("woff2"),
+          url(https://static.canva.com/web/images/f93a5165fac252ecfd593929c4e6146f.woff) format("woff");
+      unicode-range:u+0020-007e,u+00a0,u+00a2-00a9,u+00ac-00ae,u+00b0,u+00b4-00b7,u+00d7,u+00f7,u+0300-0304,u+0306-0308,u+030a-030c,u+0312,u+0326-0328,u+2013-2014,u+2018-201a,u+201c-201e,u+2020-2022,u+2026,u+2117,u+2120,u+2122,u+2190-2199,u+fb01-fb02,u+feff,u+fffc-fffd
+    }
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link rel="stylesheet" href="styleFile/style.css" type="text/css"/>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!--//------------------Problema scroll x con el header por hidecontainersoption en su display-------------------//-->
+  <!--//------------------Parte Contenedor Header-------------------//-->
+  <header id="idMainContainer_Header" class="cMainContainer_Header cDispFlexRowSpaceBetweenAlignCenter">
+    <div class="c_Header_DropDownOptions cDispFlexRowCenterAlignCenter">
+      <button id="id_Header_DropDownOptions_Button" class="cButtonTypeSvg1 cDispFlexRowCenterAlignCenter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M5.75 5.25h12.5a.75.75 0 1 1 0 1.5H5.75a.75.75 0 0 1 0-1.5zm0 6h12.5a.75.75 0 1 1 0 1.5H5.75a.75.75 0 1 1 0-1.5zm0 6h12.5a.75.75 0 1 1 0 1.5H5.75a.75.75 0 1 1 0-1.5z"></path>
+        </svg>
+      </button>
+      <div id="id_Header_DropDownOptions_HoverMessage" class="c_Header_DropDownOptions_HoverMessage cDispFlexRowCenterAlignCenter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" style="position: absolute;">
+          <path fill="currentColor" d="M5 0 L0 10 L10 10 Z"></path>
+        </svg>
+        <p class="cConfigFont8Prop1" style="color: #edeaead6;">Mostrar menú principal</p>
+      </div>
+    </div>
+    <div class="c_Header_Canva">
+      <a href="#">
+        <img src="https://static.canva.com/web/images/12487a1e0770d29351bd4ce4f87ec8fe.svg" alt="">
+      </a>
+    </div>
+    <div id="id_Header_ContainerOptions" class="c_Header_ContainerOptions">
+      <ul id="id_Header_ContainerOptions_UL" class="c_Header_ContainerOptions_UL cDispFlexRowFlexStartAlignCenter">
+        <li>
+          <div class="c_Header_ContainerOptions_UL_ContainerDropDownButtons">
+            <button class="cButtonType3 cDispFlexRowCenterAlignCenter">
+              <p class="cConfigFont6Prop1 cTextColorBlack1">Centro de diseño</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path fill="currentColor" d="m11.71 6.47-3.53 3.54c-.1.1-.26.1-.36 0L4.3 6.47a.75.75 0 1 0-1.06 1.06l3.53 3.54c.69.68 1.8.68 2.48 0l3.53-3.54a.75.75 0 0 0-1.06-1.06z"></path>
+              </svg>
+            </button>
+            <div class="c_Header_ContainerOptions_UL_DivDropDown"></div>
+          </div>
+        </li>
+        <li>
+          <div class="c_Header_ContainerOptions_UL_ContainerDropDownButtons">
+            <button class="cButtonType3 cDispFlexRowCenterAlignCenter">
+              <p class="cConfigFont6Prop1 cTextColorBlack1">Negocios</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path fill="currentColor" d="m11.71 6.47-3.53 3.54c-.1.1-.26.1-.36 0L4.3 6.47a.75.75 0 1 0-1.06 1.06l3.53 3.54c.69.68 1.8.68 2.48 0l3.53-3.54a.75.75 0 0 0-1.06-1.06z"></path>
+              </svg>
+            </button>
+            <div class="c_Header_ContainerOptions_UL_DivDropDown"></div>
+          </div>
+        </li>
+        <li>
+          <div class="c_Header_ContainerOptions_UL_ContainerDropDownButtons">
+            <button class="cButtonType3 cDispFlexRowCenterAlignCenter">
+              <p class="cConfigFont6Prop1 cTextColorBlack1">Educación</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path fill="currentColor" d="m11.71 6.47-3.53 3.54c-.1.1-.26.1-.36 0L4.3 6.47a.75.75 0 1 0-1.06 1.06l3.53 3.54c.69.68 1.8.68 2.48 0l3.53-3.54a.75.75 0 0 0-1.06-1.06z"></path>
+              </svg>
+            </button>
+            <div class="c_Header_ContainerOptions_UL_DivDropDown"></div>
+          </div>
+        </li>
+        <li>
+          <div class="c_Header_ContainerOptions_UL_ContainerDropDownButtons">
+            <button class="cButtonType3 cDispFlexRowCenterAlignCenter">
+              <p class="cConfigFont6Prop1 cTextColorBlack1">Planes y precios</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path fill="currentColor" d="m11.71 6.47-3.53 3.54c-.1.1-.26.1-.36 0L4.3 6.47a.75.75 0 1 0-1.06 1.06l3.53 3.54c.69.68 1.8.68 2.48 0l3.53-3.54a.75.75 0 0 0-1.06-1.06z"></path>
+              </svg>
+            </button>
+            <div class="c_Header_ContainerOptions_UL_DivDropDown"></div>
+          </div>
+        </li>
+        <li>
+          <div class="c_Header_ContainerOptions_UL_ContainerDropDownButtons">
+            <button class="cButtonType3 cDispFlexRowCenterAlignCenter">
+              <p class="cConfigFont6Prop1 cTextColorBlack1">Aprendé</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path fill="currentColor" d="m11.71 6.47-3.53 3.54c-.1.1-.26.1-.36 0L4.3 6.47a.75.75 0 1 0-1.06 1.06l3.53 3.54c.69.68 1.8.68 2.48 0l3.53-3.54a.75.75 0 0 0-1.06-1.06z"></path>
+              </svg>
+            </button>
+            <div class="c_Header_ContainerOptions_UL_DivDropDown"></div>
+          </div>
+        </li>
+      </ul>
+      <button id="id_Header_ContainerOptions_UL_Button3Points" class="cButtonType3 cDispFlexRowCenterAlignCenter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M5 14a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm7 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm7 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path>
+        </svg>
+      </button>
+      <div class="c_Header_ContainerOptions_UL_HideContainerDropDown cDispFlexRowFlexStartAlignFlexStart">
+
+      </div>
+      <div class="c_Header_ContainerOptions_UL_HideContainerDropDown cDispFlexRowFlexStartAlignFlexStart">
+      
+      </div>
+      <div class="c_Header_ContainerOptions_UL_HideContainerDropDown cDispFlexRowFlexStartAlignFlexStart">
+      
+      </div>
+      <div class="c_Header_ContainerOptions_UL_HideContainerDropDown cDispFlexRowFlexStartAlignFlexStart">
+      
+      </div>
+      <div class="c_Header_ContainerOptions_UL_HideContainerDropDown cDispFlexRowFlexStartAlignFlexStart">
+      
+      </div>
+    </div>
+    <div class="c_Header_ContainerInput">
+      <div class="c_Header_ContainerInput_FlexInput cDispFlexRowFlexStartAlignCenter">
+        <svg id="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M15.2 16.34a7.5 7.5 0 1 1 1.38-1.45l4.2 4.2a1 1 0 1 1-1.42 1.41l-4.16-4.16zm-4.7.16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"></path>
+        </svg>
+        <input id="" type="text" class="cConfigFont6Prop1" placeholder="Buscá logo, cartel o lo que quieras">
+      </div>
+    </div>
+    <div class="c_Header_FlexButtons cDispFlexRowCenterAlignCenter">
+      <a href="https://www.canva.com/es_ar/help/" class="cButtonTypeSvg1 cDispFlexRowCenterAlignCenter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-1.5a8.5 8.5 0 1 0 0-17 8.5 8.5 0 0 0 0 17zM8.75 9.85c.05-1.62 1.17-2.8 3.2-2.8 1.87 0 3.12 1.08 3.12 2.6 0 1.04-.52 1.77-1.45 2.33-.9.52-1.15.87-1.15 1.55v.39H10.9l-.01-.47c-.06-1.02.33-1.64 1.28-2.2.84-.5 1.13-.87 1.13-1.54 0-.71-.57-1.23-1.43-1.23-.89 0-1.45.54-1.5 1.37H8.74zm3 7.33c-.68 0-1.13-.43-1.13-1.09 0-.66.45-1.1 1.13-1.1.7 0 1.14.44 1.14 1.1 0 .66-.44 1.09-1.14 1.09z"></path>
+        </svg>
+      </a>
+      <button class="c_Header_FlexButtons_HideButtons1 cButtonTypeSvg1 cDispFlexRowCenterAlignCenter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M15.2 16.34a7.5 7.5 0 1 1 1.38-1.45l4.2 4.2a1 1 0 1 1-1.42 1.41l-4.16-4.16zm-4.7.16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"></path>
+        </svg>
+      </button>
+      <button class="c_Header_FlexButtons_HideButtons1 cButtonType1">Iniciar sesíon</button>
+      <button class="cButtonType4">Iniciar sesíon</button>
+      <button class="cButtonType1" onclick="showModal()">Registrarme</button>
+    </div>
+  </header>
+
+  <div class="cModal">
+    <div class="c_ModalRegisterForm cDispFlexRowCenterAlignFlexStart">
+      <div class="c_ModalRegisterForm_DivForm cDispFlexColumnCenterAlignCenter">
+        <div class="c_ModalRegisterForm_DivForm_Content cDispFlexColumnCenterAlignCenter">
+          <h3 class="cConfigFont3Prop1 cTextColorBlack1">
+            Iniciá sesión o registrate en cuestión de segundos
+          </h3>
+          <p class="cConfigFont6Prop1 cTextColorGray2">
+            Usá tu correo electrónico u otro servicio para continuar con Canva (¡es gratis!)
+          </p>
+          <div class="c_ModalRegisterForm_DivForm_Content_DivButtons cDispFlexColumnCenterAlignCenter">
+            <button class="cButtonType4 cDispFlexRowCenterAlignCenter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                <path fill="#4285f4" d="M386 400c45-42 65-112 53-179H260v74h102c-4 24-18 44-38 57z"></path>
+                <path fill="#34a853" d="M90 341a192 192 0 0 0 296 59l-62-48c-53 35-141 22-171-60z"></path>
+                <path fill="#fbbc02" d="M153 292c-8-25-8-48 0-73l-63-49c-23 46-30 111 0 171z"></path>
+                <path fill="#ea4335" d="M153 219c22-69 116-109 179-50l55-54c-78-75-230-72-297 55z"></path>
+              </svg>
+              <p class="cConfigFontSize1p4RemWeight600 cTextColorBlack1">
+                Usar Google
+              </p>
+            </button>
+            <button class="cButtonType4 cDispFlexRowCenterAlignCenter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="#1877f2" d="M21.5 12.058c0-5.28-4.253-9.558-9.5-9.558s-9.5 4.279-9.5 9.558c0 4.771 3.473 8.725 8.016 9.442v-6.68H8.104v-2.762h2.412V9.952c0-2.395 1.417-3.718 3.588-3.718 1.04 0 2.126.186 2.126.186v2.352h-1.198c-1.18 0-1.548.738-1.548 1.494v1.792h2.635l-.421 2.763h-2.214V21.5c4.543-.717 8.016-4.67 8.016-9.442z"></path>
+              </svg>
+              <p class="cConfigFontSize1p4RemWeight600 cTextColorBlack1">
+                Usar Facebook
+              </p>
+            </button>
+            <button class="cButtonType4 cDispFlexRowCenterAlignCenter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" file-rule="evenodd" d="M20.37 5.03A2 2 0 0 1 22 7v10a2 2 0 0 1-1.96 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h16.1H4zm.13 2.07-4.53 5.31 4.53 4.63a.5.5 0 0 0 0-.04V7.1zm-17-.14a.5.5 0 0 0 0 .04v10a.5.5 0 0 0 0 .04l4.59-4.7L3.5 6.97zm5.57 6.53-3.92 4 13.7.01L15 13.56a4 4 0 0 1-5.93-.07zm9.88-6.99H5l5.07 5.96a2.5 2.5 0 0 0 3.81 0l5.07-5.96z"></path>
+              </svg>
+              <p class="cConfigFontSize1p4RemWeight600 cTextColorBlack1"> 
+                Usar mi correo
+              </p>
+            </button>
+            <button class="cButtonType4 cDispFlexRowCenterAlignCenter">
+              <p class="cConfigFontSize1p4RemWeight600 cTextColorBlack1">
+                Continuar de otra forma
+              </p>
+            </button>
+          </div>
+          <p class="cConfigFontSize1p2RemWeight400 cTextColorGray2">
+            Al continuar, estás aceptando las 
+            <a href="https://www.canva.com/policies/terms-of-use/" target="_blank" style="color: inherit;">Condiciones de uso</a>
+            y la 
+            <a href="https://www.canva.com/policies/privacy-policy/" target="_blank" style="color: inherit;">Política de privacidad</a>
+            de Canva.
+          </p>
+          <a class="cDispFlexRowCenterAlignFlexStart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd" d="M4 18.5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 1 .5-.5h6.5c.275 0 .5.225.5.5v13.5H4Zm8.5 1.497V20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6.5c1.102 0 2 .895 2 2v3.997h2L20 9c1.105 0 2 .892 2 2v7l-1.5-.001V11c0-.278-.222-.5-.5-.5l-3.126-.001-4.374-.002v8l7.5.003a.5.5 0 0 0 .5-.5H22a2 2 0 0 1-2 2l-7.5-.003ZM5 7.497h4.5v-1.5H5v1.5Zm0 3h4.5v-1.5H5v1.5Zm4.5 3H5v-1.5h4.5v1.5Zm-4.5 3h4.5v-1.5H5v1.5Zm11-3h-2v-1.5h2v1.5Zm0 3h-2v-1.5h2v1.5Zm3-3h-2v-1.5h2v1.5Zm0 3h-2v-1.5h2v1.5Z"></path>
+            </svg>
+            <p class="cConfigFontSize1p4RemWeight600 cTextColorBlack1">
+              Registrate con tu correo electrónico académico
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="c_ModalRegisterForm_DivImg">
+        <img src="https://static.canva.com/cdn-cgi/image/format=auto,w=768/web/images/124c093965cc75f6471205e4c9c510ca.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!--//----------------Parte Contenedor Principal 1-----------------//-->
+    <div class="cMainContainer_PortadaInicial cDispFlexColumnCenterAlignCenter">
+      <div class="c_PortadaInicial_ContainerMain cDispFlexColumnCenterAlignCenter">
+        <h1 class="cConfigFont1Prop1 cTextColorBlack1">
+          ¿Qué vamos a diseñar hoy?
+        </h1>
+        <p class="cConfigFont4Prop1 cTextColorGray1">
+          Canva hace que sea más fácil crear y compartir diseños profesionales.
+        </p>
+        <button class="cButtonType1">Registrame gratis</button>
+      </div>
+      <div class="c_PortadaInicial_Video">
+        <video autoplay muted loop>
+          <source src="videos/HeroBanner.mp4" type="video/mp4" />
+          <p>Tu navegador no soporta HTML5</p>
+        </video>
+      </div>
+    </div>
+
+    <!--//----------------Parte Contenedor Principal 2-----------------//-->
+    <div class="cMainContainer_CanvaOptions">
+      <div class="c_CanvaOptions_ContMainPart">
+        <div class="c_CanvaOptions_ContMainPart_Title">
+          <h2 class="cConfigFont2Prop1 cTextColorBlack1">
+            Una herramienta ideal para todo el mundo
+          </h2>
+        </div>
+        <div style="display: flex; justify-content: center;">
+        <ul class="c_CanvaOptions_ContMainPart_Grid">
+          <li class="c_CanvaOptions_ContMainPart_Grid_LI cDispFlexColumnCenterAlignCenter">
+            <div class="c_CanvaOptions_ContMainPart_Grid_LI_ContentText">
+              <div class="c_CanvaOptions_ContMainPart_Grid_LI_ContentText_TitleSvg cDispFlexRowCenterAlignFlexStart">
+                <h4 id="hCanva1" class="cConfigFont3Prop1 cTextColorBlack1">
+                  Canva Gratis
+                </h4>
+              </div>
+              <p class="cConfigFont6Prop1 cTextColorGray1">
+                Para cualquiera que quiera diseñar, por su cuenta o en equipo. No se necesita experiencia en diseño, y es gratis para siempre.
+              </p>
+            </div>
+            <button class="cButtonType1">Usar Canva Gratis</button>
+          </li>
+          <li class="c_CanvaOptions_ContMainPart_Grid_LI cDispFlexColumnCenterAlignCenter">
+            <div class="c_CanvaOptions_ContMainPart_Grid_LI_ContentText">
+              <div class="c_CanvaOptions_ContMainPart_Grid_LI_ContentText_TitleSvg cDispFlexRowCenterAlignFlexStart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" fill="currentColor" d="M13.91 4.91a1.91 1.91 0 0 1-1.044 1.701c.942 2.366 1.928 3.53 2.795 3.622.982.104 1.88-.323 2.76-1.377a.977.977 0 0 1 .072-.078 1.91 1.91 0 1 1 1.468.873l-1.423 5.42c-.297 1.13-1.363 1.922-2.586 1.922H8.066c-1.223 0-2.29-.792-2.586-1.922L4.063 9.675a1.91 1.91 0 1 1 1.46-.898c.03.028.059.06.086.093.837 1.048 1.727 1.471 2.748 1.363.908-.096 1.888-1.253 2.793-3.614a1.91 1.91 0 1 1 2.76-1.71ZM6.561 19.008h10.875c.518 0 .938.448.938 1s-.42 1-.938 1H6.563c-.517 0-.937-.448-.937-1s.42-1 .937-1Z"></path>
+                </svg>
+                <h4 id="hCanva1" class="cConfigFont3Prop1 cTextColorBlack1">
+                  Canva Pro
+                </h4>
+              </div>
+              <p class="cConfigFont6Prop1 cTextColorGray1">
+                Para quienes quieren tener acceso ilimitado a contenido prémium, con herramientas especiales para hacer crecer su marca o su proyecto personal.
+              </p>
+            </div>
+            <button class="cButtonType1">Quiero probar Canva Pro gratis ahora</button>
+          </li>
+          <li class="c_CanvaOptions_ContMainPart_Grid_LI cDispFlexColumnCenterAlignCenter">
+            <div class="c_CanvaOptions_ContMainPart_Grid_LI_ContentText">
+              <div class="c_CanvaOptions_ContMainPart_Grid_LI_ContentText_TitleSvg cDispFlexRowCenterAlignFlexStart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" fill="currentColor" d="M13.91 4.91a1.91 1.91 0 0 1-1.044 1.701c.942 2.366 1.928 3.53 2.795 3.622.982.104 1.88-.323 2.76-1.377a.977.977 0 0 1 .072-.078 1.91 1.91 0 1 1 1.468.873l-1.423 5.42c-.297 1.13-1.363 1.922-2.586 1.922H8.066c-1.223 0-2.29-.792-2.586-1.922L4.063 9.675a1.91 1.91 0 1 1 1.46-.898c.03.028.059.06.086.093.837 1.048 1.727 1.471 2.748 1.363.908-.096 1.888-1.253 2.793-3.614a1.91 1.91 0 1 1 2.76-1.71ZM6.561 19.008h10.875c.518 0 .938.448.938 1s-.42 1-.938 1H6.563c-.517 0-.937-.448-.937-1s.42-1 .937-1Z"></path>
+                </svg>
+                <h4 id="hCanva1" class="cConfigFont3Prop1 cTextColorBlack1">
+                  Canva para Equipos
+                </h4>
+              </div>
+              <p class="cConfigFont6Prop1 cTextColorGray1">
+                Para equipos pequeños y grandes que quieren crear colaborativamente, con herramientas prémium de administración y flujos de aprobación.
+              </p>
+            </div>
+            <button class="cButtonType1">Iniciá tu prueba gratis de Canva para Equipos</button>
+          </li>
+        </ul>
+        </div>
+      </div>
+
+      <div class="c_CanvaOptions_IntermediateText">
+        <p class="cConfigFont6Prop1 cTextColorGray1">
+          <a href="https://www.canva.com/es_ar/educacion/" target="_blank" class="cTextColorViolet1">Los centros educativos</a> y
+          <a href="https://www.canva.com/es_ar/canva-para-ongs/" target="_blank" class="cTextColorViolet1">las organizaciones sin fines de lucro</a> pueden usar las funciones prémium de Canva gratis
+        </p>
+      </div>
+
+      <div class="c_CanvaOptions_Logos">
+        <ul class="c_CanvaOptions_Logos_List cDispFlexRowCenterAlignCenter">
+          <li class="c_CanvaOptions_Logos_List_Item cDispFlexRowCenterAlignCenter">
+            <img src="img/logo1.png" alt="ilogo1">
+          </li>
+          <li class="c_CanvaOptions_Logos_List_Item cDispFlexRowCenterAlignCenter">
+            <img src="img/logo2.png" alt="ilogo1">
+          </li>
+          <li class="c_CanvaOptions_Logos_List_Item cDispFlexRowCenterAlignCenter">
+            <img src="img/logo3.png" alt="ilogo1">
+          </li>
+          <li class="c_CanvaOptions_Logos_List_Item cDispFlexRowCenterAlignCenter">
+            <img src="img/logo4.png" alt="ilogo1">
+          </li>
+          <li class="c_CanvaOptions_Logos_List_Item cDispFlexRowCenterAlignCenter">
+            <img src="img/logo5.png" alt="ilogo1">
+          </li>
+          <li class="c_CanvaOptions_Logos_List_Item cDispFlexRowCenterAlignCenter">
+            <img src="img/logo6.png" alt="ilogo1">
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--//----------------Parte Contenedor Principal 3-----------------//-->
+    <div class="cMainContainer_FormTextAndImage cDispFlexColumnCenterAlignCenter">
+      <div class="c_FormTextAndImage_Grid">
+        <div class="cDispFlexRowCenterAlignCenter">
+          <video autoplay muted loop>
+            <source src="videos/Diseños listos.mp4" type="video/mp4" />
+            <p>Tu navegador no soporta HTML5</p>
+          </video>
+        </div>
+        <div class="c_FormTextAndImage_Grid_FormText cDispFlexColumnCenterAlignFlexStart">
+          <h2 class="cConfigFont2Prop1 cTextColorBlack1">
+            Diseños listos
+          </h2>
+          <p class="cConfigFont5Prop1 cTextColorBlack1">
+            Cuando necesites 
+            <a href="https://www.canva.com/business-cards/" target="_blank" class="cTextColorViolet1">tarjetas personales</a> nuevas o edites tu próximo 
+            <a href="https://www.canva.com/video-editor/" target="_blank" class="cTextColorViolet1">video</a>, vas a poder elegir entre miles de plantillas, imágenes y contenido de calidad creados por profesionales.
+          </p>
+          <button class="cButtonType1">Creá un diseño</button>
+        </div>
+      </div>
+      <div class="c_FormTextAndImage_Grid">
+        <div class="c_FormTextAndImage_Grid_FormText cDispFlexColumnCenterAlignFlexStart">
+          <h2 class="cConfigFont2Prop1 cTextColorBlack1">
+            Pensado para el trabajo en equipo
+          </h2>
+          <p class="cConfigFont5Prop1 cTextColorBlack1">
+            Invitá a más personas a editar con vos o creá un equipo para gestionar los recursos de tu marca, hacer una lluvia de ideas en una 
+            <a href="https://www.canva.com/online-whiteboard/" target="_blank" class="cTextColorViolet1">pizarra online</a>, aprobar diseños y administrar tu contenido con herramientas como 
+            <a href="https://www.canva.com/docs/" target="_blank" class="cTextColorViolet1">Documentos de Canva</a>.
+          </p>
+          <button class="cButtonType1">Usar Canva Gratis</button>
+        </div>
+        <div class="cDispFlexRowCenterAlignCenter">
+          <img src="img/imgIncreiblesResultados.png" alt="incRes">
+        </div>
+      </div>
+      <div class="c_FormTextAndImage_Grid">
+        <div class="cDispFlexRowCenterAlignCenter">
+          <img src="img/imgNuevoLanzamiento.png" alt="nuevoLan">
+        </div>
+        <div class="c_FormTextAndImage_Grid_FormText cDispFlexColumnCenterAlignFlexStart">
+          <h2 class="cConfigFont2Prop1 cTextColorBlack1">
+            Demasiado bueno para no compartirlo
+          </h2>
+          <p class="cConfigFont5Prop1 cTextColorBlack1">
+            Ya sea que quieras crear un 
+            <a href="https://www.canva.com/website-builder/" target="_blank" class="cTextColorViolet1">sitio web</a> o personalizar un 
+            <a href="https://www.canva.com/posters/" target="_blank" class="cTextColorViolet1">cartel</a>, tu contenido merece ver la luz del día. Con Canva, es muy fácil presentar, descargar, programar y compartir tus diseños. También podés imprimirlos y recibirlos en la puerta de tu casa.
+          </p>
+          <button class="cButtonType1">Diseña tu visión</button>
+        </div>
+      </div>
+    </div>
+
+    <!--//----------------Parte Contenedor Principal 4-----------------//-->
+    <div class="cMainContainer_FormPlantillas">
+      <div class="c_FormPlantillas_Title cDispFlexColumnCenterAlignCenter">
+        <h2 class="cConfigFont2Prop1 cTextColorBlack1">
+          Plantillas para diseñar lo que quieras
+        </h2>
+        <p class="cConfigFont5Prop1 cTextColorGray1">
+          Personalizá una plantilla comercial o diseñá algo más personal, como una invitación.
+        </p>
+      </div>
+
+      <div id="id_FormPlantillas_Grid" class="c_FormPlantillas_Grid">
+
+      </div>
+
+      <template id="id_Template_FormPlantillas_Grid_FlexColumn">
+        <div class="c_FormPlantillas_Grid_FlexColumn cDispFlexColumnCenter">
+        </div>
+      </template>
+
+      <template id="id_Template_FormPlantillas_Grid_ContainerPlantilla">
+        <div class="c_FormPlantillas_Grid_FlexColumn_ContainerPlantilla">
+          <a href="#" target="_blank">
+            <img src="" alt="">
+          </a>
+        </div>
+      </template>
+      
+      <div class="c_FormPlantillas_ButtonExplore cDispFlexRowCenterAlignCenter">
+        <a href="https://www.canva.com/es_ar/plantillas/" target="_blank" style="text-decoration: none; text-align: center;" class="cButtonType4">Explorar las plantillas</a>
+      </div>
+    </div>
+    
+    <!--//----------------Parte Contenedor Principal 5-----------------//-->
+    <div class="cMainContainer_PruebaCanvaEquipos">
+      <div class="c_PruebaCanvaEquipos_Title cDispFlexColumnCenterAlignCenter">
+        <h2 class="cConfigFont2Prop1 cTextColorBlack1">
+          Creá tus mejores diseños en equipo.
+        </h2>
+        <p class="cConfigFont5Prop1 cTextColorGray1">
+          Probá Canva para Equipos, la solución integral para que equipos de cualquier tamaño diseñen en equipo.
+        </p>
+      </div>
+      <div class="c_PruebaCanvaEquipos_ContainerMain">
+        <div class="c_PruebaCanvaEquipos_ContainerMain_FormText cDispFlexColumnCenterAlignCenter">
+          <div class="cDispFlexRowCenterAlignFlexStart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <path fill-rule="evenodd" fill="currentColor" d="M14.078 5.333H5.334A2.667 2.667 0 0 0 2.667 8v2.667c0 .203.023.402.066.592a2.315 2.315 0 0 0-.066.55v12.382c0 1.367 1.194 2.476 2.667 2.476h21.333c1.473 0 2.667-1.109 2.667-2.477V11.81c0-1.368-1.194-2.477-2.667-2.477h-9.333l-.726-2.176a2.667 2.667 0 0 0-2.53-1.824Zm-8.744 4h9.892L14.71 7.79a.667.667 0 0 0-.633-.456H5.334A.667.667 0 0 0 4.667 8v1.411c.213-.05.436-.078.667-.078Zm-.667 2.477c0-.229.267-.477.667-.477h21.333c.4 0 .667.248.667.477v12.38c0 .229-.267.477-.667.477H5.334c-.4 0-.667-.248-.667-.477V11.81Z"></path>
+            </svg>
+            <p class="cConfigFont6Prop1 cTextColorBlack1" >
+              <span style="font-weight: 600;">Carpetas de equipo</span>
+              para ayudarte a organizarte, a guardar recursos de marca y a gestionar contenido
+            </p>
+          </div>
+          <div class="cDispFlexRowCenterAlignFlexStart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <path fill-rule="evenodd" fill="currentColor" d="M11 6h10a1 1 0 0 1 1 1v1H10V7a1 1 0 0 1 1-1Zm-3 4V7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v18a3 3 0 0 1-3 3H11a3 3 0 0 1-3-3V10Zm14 0v10H10V10h12ZM10 22h12v3a1 1 0 0 1-1 1H11a1 1 0 0 1-1-1v-3Zm5 1a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2Z"></path>
+            </svg>
+            <p class="cConfigFont6Prop1 cTextColorBlack1" >
+              <span style="font-weight: 600;">Diseñá, creá, programá y publicá</span>
+              tus posts para redes sociales desde Canva
+            </p>
+          </div>
+          <div class="cDispFlexRowCenterAlignFlexStart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <path fill-rule="evenodd" fill="currentColor" d="M7.7 17c.5 0 1 .4 1 1s-.5 1-1 1H5.3v2.3c0 .6-.4 1-1 1a1 1 0 0 1-1-1V19H1c-.6 0-1-.4-1-1s.4-1 1-1h2.3v-2.3c0-.6.5-1 1-1 .6 0 1 .4 1 1V17h2.4zm18.1 5H30c0-.4-.3-.8-.6-1L26 19.5c-.8-.3-1.2-1-1.2-1.8V17c0-.7.3-1.3.8-1.7 1.3-.8 2.3-3.3 2.3-5.6 0-2.6-1.1-3.7-3.3-3.7h-.5c-.2-.6-.5-1.2-1-1.8.3-.1 1.1-.2 1.5-.2 3.2 0 5.3 1.9 5.3 5.7 0 2.2-.9 3.5-2.1 6.3l-1 1v.7l3.4 1.5c1.1.5 1.8 1.6 1.8 2.8a2 2 0 0 1-2 2h-3.1c-.2-.7-.5-1.4-1.1-2zm-6.4-1.7 3.6 1.6c1.4.6 2.3 2 2.3 3.6v.5a2 2 0 0 1-2 2H8.7a2 2 0 0 1-2-2v-.5c0-1.6.9-3 2.3-3.6l3.7-1.6v-1.6c-2.1-1.9-3.4-5.4-3.4-8.7 0-4.8 2.6-7.3 6.7-7.3 4 0 6.7 2.3 6.7 7.1 0 3.3-1.3 6.8-3.3 8.8v1.7zm-2-1.7c0-.6.2-1.1.6-1.5 1.6-1.5 2.7-4.4 2.7-7.3 0-3.5-1.6-5.1-4.7-5.1s-4.7 1.7-4.7 5.3c0 2.9 1.1 5.8 2.7 7.2.4.4.7.9.7 1.5v1.6c0 .8-.5 1.6-1.2 1.9l-3.7 1.6c-.7.3-1.1.9-1.1 1.7v.5h14.6v-.5c0-.8-.4-1.5-1.1-1.8l-3.6-1.6c-.8-.3-1.2-1-1.2-1.8v-1.7z"></path>
+            </svg>
+            <p class="cConfigFont6Prop1 cTextColorBlack1" >
+              <span style="font-weight: 600;">Trabajá en equipo y en tiempo real</span>
+              con personas de distintos países, departamentos o empresas
+            </p>
+          </div>
+          <div class="cDispFlexRowCenterAlignFlexStart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <path fill="currentColor" d="M28.996 14.696c.003.1.004.202.004.304 0 5.68-4.581 10.288-10.25 10.333-.022.01-.058.026-.11.055-.148.08-.345.208-.585.384-.477.352-1.043.833-1.598 1.33-.551.494-1.074.987-1.462 1.357l-.194.186c-.11.103-.203.193-.276.262a7.69 7.69 0 0 1-.15.139 1.669 1.669 0 0 1-.09.075h-.001c-.012.01-.074.058-.158.101h-.001a1.006 1.006 0 0 1-1.168-.182 1 1 0 0 1-.292-.707v-3.02C7.269 24.967 3 20.482 3 15 3 9.293 7.626 4.667 13.333 4.667h5.334c.264 0 .525.01.784.03a7.281 7.281 0 0 0-.664 1.97h-5.454a8.333 8.333 0 1 0 0 16.666h1.332v2.695c.148-.137.302-.276.457-.416a24.946 24.946 0 0 1 1.747-1.45c.276-.203.556-.392.82-.534.22-.12.584-.295.978-.295a8.333 8.333 0 0 0 8.329-8.067 7.283 7.283 0 0 0 2-.57Z"></path>
+              <path fill="currentColor" d="M25 11.667a1 1 0 1 0 2 0V9h2.666a1 1 0 1 0 0-2H27V4.333a1 1 0 1 0-2 0V7h-2.667a1 1 0 1 0 0 2H25v2.667Z"></path>
+            </svg>
+            <p class="cConfigFont6Prop1 cTextColorBlack1" >
+              <span style="font-weight: 600;">Comentarios en los diseños</span>
+              para comunicarte, seguir creando contenido y resolver sugerencias en tiempo real
+            </p>
+          </div>
+        </div>
+        <div class="c_PruebaCanvaEquipos_ContainerMain_Image">
+          <img src="https://static.canva.com/anon_home/teams-es-AR-1150x850.png" alt="">
+        </div>
+      </div>
+      <a href="https://www.canva.com/es_ar/for-teams/" target="_blank" style="text-decoration: none;" class="c_PruebaCanvaEquipos_Button cDispFlexRowCenterAlignCenter">
+        <button class="cButtonType1">Probá Canva para Equipos</button>
+      </a>
+    </div>
+
+    <!--//----------------Parte Contenedor Principal 6-----------------//-->
+    <div class="cMainContainer_SlideForms">
+      <div class="c_SlideForms_Title cDispFlexColumnCenterAlignCenter">
+        <h2 class="cConfigFont2Prop1 cTextColorBlack1">
+          Tenemos muchas sorpresas para vos
+        </h2>
+        <p class="cConfigFont5Prop1 cTextColorGray1">
+          Estas son algunas de nuestras mejores características que quizás no conocés
+        </p>
+      </div>
+
+      <div id="id_SlideForms_ContMain" class="c_SlideForms_ContMain">
+        <div class="c_SlideForms_ContMain_ContShow cDispFlexRowFlexStartAlignCenter">
+          <div class="c_SlideForms_ContMain_ContShow_ContForms cDispFlexRowCenterAlignFlexStart">
+    
+          </div>
+        </div>
+        <div class="c_SlideForms_ContainerMain_ButtonSlide cDispFlexRowCenterAlignCenter" style="left: -20px; visibility: hidden;" onclick="slideControl_SlideForms_ButtonSlide('left')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M9.53 11.71 5.99 8.18a.25.25 0 0 1 0-.36L9.53 4.3a.75.75 0 1 0-1.06-1.06L4.93 6.76c-.68.69-.68 1.8 0 2.48l3.54 3.53a.75.75 0 0 0 1.06-1.06z"></path>
+          </svg>
+        </div>
+        <div class="c_SlideForms_ContainerMain_ButtonSlide cDispFlexRowCenterAlignCenter" style="right: -20px; visibility: visible;" onclick="slideControl_SlideForms_ButtonSlide('right')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path fill="currentColor" d="m6.47 4.29 3.54 3.53c.1.1.1.26 0 .36L6.47 11.7a.75.75 0 1 0 1.06 1.06l3.54-3.53c.68-.69.68-1.8 0-2.48L7.53 3.23a.75.75 0 0 0-1.06 1.06z"></path>
+          </svg>
+        </div>
+      </div>
+
+      <template id="id_Template_SlideForms_ContMain_ContShow_ContForms_Form">
+        <div class="c_SlideForms_ContMain_ContShow_ContForms_Form cDispFlexColumnCenterAlignCenter">
+          <a target="_blank" class="c_SlideForms_ContMain_ContShow_ContForms_Form_Img cDispFlexRowCenterAlignCenter">
+            <img src="" alt="">
+          </a>
+          <div class="c_SlideForms_ContMain_ContShow_ContForms_Form_TextContent cDispFlexColumnCenterAlignFlexStart">
+            <h4 class="cConfigFontSize1p4RemWeight600 cTextColorBlack1">
+
+            </h4>
+            <p class="cConfigFontSize1p2RemWeight400 cTextColorGray1">
+
+            </p>
+          </div>
+        </div>
+      </template>
+
+    </div>
+  </main>
+  
+  <!--//----------------Parte Contenedor Principal 7-----------------//-->
+  <footer class="cMainContainer_FinalDescriptions">
+    <div class="c_FinalDescriptions_GridDescriptions">
+      <div class="c_FinalDescriptions_GridDescription_Form cDispFlexColumnFlexStartAlignFlexStart">
+        <div role="button" class="c_FinalDescriptions_GridDescription_Form_TextAndSvg">
+          <h3 class="cConfigFont7Prop1 cTextColorBlack1">
+            Explorar
+          </h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path fill="currentColor" d="m11.71 6.47-3.53 3.54c-.1.1-.26.1-.36 0L4.3 6.47a.75.75 0 1 0-1.06 1.06l3.53 3.54c.69.68 1.8.68 2.48 0l3.53-3.54a.75.75 0 0 0-1.06-1.06z"></path>
+          </svg>
+        </div>
+        <div class="c_FinalDescriptions_GridDescription_Form_Wrapper">
+          <ul class="c_FinalDescriptions_GridDescription_Form_Wrapper_UL cConfigFont6Prop1 cTextColorBlack1">
+            <li><a href="https://www.canva.com/es_ar/crear/logos/">Logotipos</a></li>
+            <li><a href="https://www.canva.com/es_ar/crear/carteles/">Pósteres</a></li>
+            <li><a href="https://www.canva.com/es_ar/crear/tarjetas-personales/">Tarjetas personales</a></li>
+            <li><a href="https://www.canva.com/es_ar/crear/flyers/">Volantes</a></li>
+            <li><a href="https://www.canva.com/es_ar/crear/curriculum-vitae/">Currículums</a></li>
+            <li><a href="https://www.canva.com/es_ar/crear/infografias/">Infografías</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="c_FinalDescriptions_GridDescription_Form cDispFlexColumnFlexStartAlignFlexStart">
+        <div role="button" class="c_FinalDescriptions_GridDescription_Form_TextAndSvg">
+          <h3 class="cConfigFont7Prop1 cTextColorBlack1">
+            Descubrir
+          </h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path id="id_FinalDescriptions_GridForm_ContainerForm_WrapperULSvgPath2" fill="currentColor" d="m11.71 6.47-3.53 3.54c-.1.1-.26.1-.36 0L4.3 6.47a.75.75 0 1 0-1.06 1.06l3.53 3.54c.69.68 1.8.68 2.48 0l3.53-3.54a.75.75 0 0 0-1.06-1.06z"></path>
+          </svg>
+        </div>
+        <div class="c_FinalDescriptions_GridDescription_Form_Wrapper">
+          <ul class="c_FinalDescriptions_GridDescription_Form_Wrapper_UL cConfigFont6Prop1 cTextColorBlack1">
+            <li><a href="https://www.canva.com/es_ar/crear/">Tipos de diseños</a></li>
+            <li><a href="https://www.canva.com/es_ar/plantillas/">Plantillas</a></li>
+            <li><a href="https://www.canva.com/es_ar/graficos/">Gráficos</a></li>
+            <li><a href="https://www.canva.com/es_ar/funciones/">Edición de fotos</a></li>
+            <li><a href="https://www.canva.com/es_ar/html_sitemap/">Directorio de plantillas</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="c_FinalDescriptions_GridDescription_Form cDispFlexColumnFlexStartAlignFlexStart">
+        <div role="button" class="c_FinalDescriptions_GridDescription_Form_TextAndSvg">
+          <h3 class="cConfigFont7Prop1 cTextColorBlack1">
+            Producto
+          </h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path fill="currentColor" d="m11.71 6.47-3.53 3.54c-.1.1-.26.1-.36 0L4.3 6.47a.75.75 0 1 0-1.06 1.06l3.53 3.54c.69.68 1.8.68 2.48 0l3.53-3.54a.75.75 0 0 0-1.06-1.06z"></path>
+          </svg>
+        </div>
+        <div class="c_FinalDescriptions_GridDescription_Form_Wrapper">
+          <ul class="c_FinalDescriptions_GridDescription_Form_Wrapper_UL cConfigFont6Prop1 cTextColorBlack1">
+            <li><a href="https://www.canva.com/es_ar/descargar/windows/">Descargá la app</a></li>
+            <li><a href="https://www.canva.com/es_ar/pro/">Pro</a></li>
+            <li><a href="https://www.canva.com/es_ar/for-teams/">Canva para Equipos</a></li>
+            <li><a href="https://www.canva.com/es_ar/educacion/">Educación</a></li>
+            <li><a href="https://www.canva.com/es_ar/precios/">Precios</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="c_FinalDescriptions_GridDescription_Form cDispFlexColumnFlexStartAlignFlexStart">
+        <div role="button" class="c_FinalDescriptions_GridDescription_Form_TextAndSvg">
+          <h3 class="cConfigFont7Prop1 cTextColorBlack1">
+            Empresa
+          </h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path id="id_FinalDescriptions_GridForm_ContainerForm_WrapperULSvgPath4" fill="currentColor" d="m11.71 6.47-3.53 3.54c-.1.1-.26.1-.36 0L4.3 6.47a.75.75 0 1 0-1.06 1.06l3.53 3.54c.69.68 1.8.68 2.48 0l3.53-3.54a.75.75 0 0 0-1.06-1.06z"></path>
+          </svg>
+        </div>
+        <div class="c_FinalDescriptions_GridDescription_Form_Wrapper">
+          <ul class="c_FinalDescriptions_GridDescription_Form_Wrapper_UL cConfigFont6Prop1 cTextColorBlack1">
+            <li><a href="https://www.canva.com/about/">Conocenos</a></li>
+            <li><a href="https://www.canva.com/developers/">Desarrolladores</a></li>
+            <li><a href="https://www.canva.com/policies/terms-of-use/">Términos y Política de privacidad</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="c_FinalDescriptions_FlexForm cDispFlexRowSpaceAroundAlignCenter">
+      <div class="c_FinalDescriptions_FlexForm_ContainerButton">
+        <div id="id_FinalDescriptions_FlexForm_ContainerButton_Wrapper" class="c_FinalDescriptions_FlexForm_ContainerButton_Wrapper">
+          <div id="id_FinalDescriptions_FlexForm_ContainerButton_Wrapper_ContainerInput" class="id_FinalDescriptions_FlexForm_ContainerButton_Wrapper_ContainerInput cDispFlexRowCenter">
+            <svg id="id_FinalDescriptions_FlexForm_ContainerButton_Wrapper_ContainerInput_Svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M15.2 16.34a7.5 7.5 0 1 1 1.38-1.45l4.2 4.2a1 1 0 1 1-1.42 1.41l-4.16-4.16zm-4.7.16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"></path>
+            </svg>
+            <input id="id_FinalDescriptions_FlexForm_ContainerButton_Wrapper_ContainerInput_Input" type="text" class="cConfigFont6Prop1">
+          </div>
+          <ul id="id_FinalDescriptions_FlexForm_ContainerButton_Wrapper_ListBox" class="c_FinalDescriptions_FlexForm_ContainerButton_Wrapper_ListBox cDispFlexColumnCenter cConfigFont6Prop1 cTextColorBlack1">
+            
+          </ul>
+        </div>
+        <button id="id_FinalDescriptions_FlexForm_ContainerButton_Button" class="c_FinalDescriptions_FlexForm_ContainerButton_Button cDispFlexRowCenterAlignCenter">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M3.8 14.25h3.81a21.9 21.9 0 0 1 0-4.5h-3.8a8.5 8.5 0 0 0 0 4.5zm.57 1.5c1 2.04 2.8 3.61 4.98 4.33-.68-1.1-1.2-2.6-1.52-4.33H4.37zm15.83-1.5a8.5 8.5 0 0 0 0-4.5h-3.81a21.9 21.9 0 0 1 0 4.5h3.8zm-.57 1.5h-3.46a12.78 12.78 0 0 1-1.52 4.33 8.53 8.53 0 0 0 4.98-4.33zm-10.5-1.5h5.74a20.12 20.12 0 0 0 0-4.5H9.13a20.12 20.12 0 0 0 0 4.5zm.23 1.5c.56 2.84 1.69 4.75 2.64 4.75.95 0 2.08-1.9 2.64-4.75H9.36zm-4.99-7.5h3.46c.31-1.74.84-3.24 1.52-4.33a8.53 8.53 0 0 0-4.98 4.33zm15.26 0a8.53 8.53 0 0 0-4.98-4.33c.68 1.1 1.2 2.6 1.52 4.33h3.46zm1.64 0h.04v.1a10 10 0 1 1-.04-.1zm-11.91 0h5.28C14.08 5.41 12.95 3.5 12 3.5c-.95 0-2.08 1.9-2.64 4.75z"></path>
+          </svg>
+          <p class="cConfigFont6Prop1 cTextColorBlack1" style="white-space: nowrap;">
+            Español (Argetina)
+          </p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path fill="currentColor" d="m11.71 6.47-3.53 3.54c-.1.1-.26.1-.36 0L4.3 6.47a.75.75 0 1 0-1.06 1.06l3.53 3.54c.69.68 1.8.68 2.48 0l3.53-3.54a.75.75 0 0 0-1.06-1.06z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="c_FinalDescriptions_FlexForm_Container cDispFlexRowCenter">
+        <div class="c_FinalDescriptions_FlexForm_ContainerText cDispFlexColumnCenter">
+          <p class="cConfigFont6Prop1 cTextColorGray1">
+            © 2022 Todos los derechos reservados: Canva<sup>®</sup>
+          </p>
+          <div class="c_FinalDescriptions_FlexForm_ContainerText_CCP cDispFlexRowCenter cConfigFont6Prop1">
+            <a href="https://www.canva.com/policies/privacy-policy/" target="_blank" class="cTextColorBlack1" style="text-decoration: none;">Política de privacidad</a>
+            <span style="background-color: black; width: 1px; height: 16px; margin-block: auto;"></span>
+            <a href="https://www.canva.com/policies/terms-of-use/" target="_blank" class="cTextColorBlack1" style="text-decoration: none;">Condiciones</a>
+          </div>
+        </div>
+        <div class="c_FinalDescriptions_FlexForm_ContainerImgs cDispFlexRowCenter">
+          <a href="https://www.facebook.com/canva" target="_blank" class="c_FinalDescriptions_FlexForm_ContainerImgs_Fb">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="color: #1877f2;">
+              <path fill="currentColor" d="M21.5 12.058c0-5.28-4.253-9.558-9.5-9.558s-9.5 4.279-9.5 9.558c0 4.771 3.473 8.725 8.016 9.442v-6.68H8.104v-2.762h2.412V9.952c0-2.395 1.417-3.718 3.588-3.718 1.04 0 2.126.186 2.126.186v2.352h-1.198c-1.18 0-1.548.738-1.548 1.494v1.792h2.635l-.421 2.763h-2.214V21.5c4.543-.717 8.016-4.67 8.016-9.442z"></path>
+            </svg>
+          </a>
+          <a href="https://twitter.com/canva" target="_blank" class="c_FinalDescriptions_FlexForm_ContainerImgs_Twt">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="color: #1da1f2;">
+              <path fill="currentColor" d="M19.74 6.69a4.26 4.26 0 0 0 1.7-2.38c-.75.5-1.58.85-2.46 1.05A3.73 3.73 0 0 0 16.13 4c-2.15 0-3.89 1.92-3.89 4.3 0 .33.04.66.1.97a10.75 10.75 0 0 1-8.02-4.48 4.61 4.61 0 0 0 1.2 5.73 3.6 3.6 0 0 1-1.76-.54v.05c0 2.08 1.34 3.82 3.12 4.21a3.56 3.56 0 0 1-1.75.07 3.97 3.97 0 0 0 3.63 2.98A7.36 7.36 0 0 1 3 19.07 10.29 10.29 0 0 0 8.97 21c7.16 0 11.07-6.54 11.07-12.21l-.01-.56a8.4 8.4 0 0 0 1.94-2.22c-.7.34-1.45.57-2.23.68z"></path>
+            </svg>
+          </a>
+          <a href="https://ar.pinterest.com/canva/" target="_blank" class="c_FinalDescriptions_FlexForm_ContainerImgs_Ptr">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="color: #bd081c;">
+              <path fill="currentColor" d="M12 2a10 10 0 0 0-3.64 19.31c-.1-.79-.17-2 .03-2.87l1.17-4.97s-.3-.6-.3-1.48c0-1.4.8-2.43 1.81-2.43.86 0 1.27.64 1.27 1.4 0 .87-.55 2.15-.83 3.34-.24 1 .5 1.8 1.48 1.8 1.78 0 3.14-1.87 3.14-4.58 0-2.39-1.72-4.06-4.17-4.06a4.33 4.33 0 0 0-4.52 4.34c0 .86.33 1.78.75 2.28a.3.3 0 0 1 .07.29l-.28 1.13c-.05.18-.15.22-.34.13-1.25-.58-2.03-2.4-2.03-3.87 0-3.15 2.3-6.05 6.61-6.05 3.47 0 6.16 2.47 6.16 5.77 0 3.45-2.17 6.22-5.18 6.22-1.02 0-1.97-.52-2.3-1.15l-.62 2.38c-.22.87-.83 1.96-1.24 2.62A10 10 0 1 0 12 2"></path>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/canva/" target="_blank" class="c_FinalDescriptions_FlexForm_ContainerImgs_Ig">
+            <img src="img/Instagram-Glyph-Color-Logo.wine.svg" alt="" width="28" height="28" style="user-select: none;">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--//----------------Parte Contenedor Principal 8-----------------//-->
+  <footer class="cMainContainer_StickyBottomPanel">
+    <div class="c_StickyBottomPanel_Container cDispFlexRowSpaceAroundAlignCenter">
+      <div class="c_StickyBottomPanel_Panel_ContainerP cDispFlexRowCenterAlignCenter">
+        <p class="cConfigFont6Prop1 cTextColorBlack1">
+          <span style="font-weight: 600;">¡Sentite como en casa!</span> 
+          Iniciá sesión para guardar y proteger tus diseños en tu cuenta.
+        </p>
+      </div>
+      <div class="c_StickyBottomPanel_Panel_ContainerButtons cDispFlexRowCenterAlignCenter">
+        <button class="cButtonType4">Explorá Canva</button>
+        <button class="cButtonType1">Iniciar Sesión</button>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

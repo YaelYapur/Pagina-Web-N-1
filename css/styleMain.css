@@ -1,0 +1,1303 @@
+/*
+@import "style_StickyBottomPanel.css";
+@import "asd.css";*/
+
+
+/* */
+html, body {
+    width: 100%;
+    font-family: "Canva Sans",Arial,sans-serif;
+    font-size: 10px;
+    margin: 0;
+    background-color: #efefef61;
+  }
+  
+  /**/
+  h1, h2, h3, h4, p{
+    margin: 0;
+  }
+  
+  /*-------------Clases  de uso general---------------*/
+  .cTextColorBlack1{
+    color: #0d1216;
+  }
+  
+  .cTextColorGray1{
+    color: rgba(13,18,22,.7);
+  }
+  
+  .cTextColorGray2{
+    color: rgba(13,18,22,.86);
+  }
+  
+  .cTextColorViolet1{
+    color: #8b3dff;
+  }
+  
+  .cConfigFont1Prop1{
+    font-size: 4.8rem;
+    line-height: 6.4rem;
+    font-weight: 700;
+    font-variation-settings: "opsz" 100;
+  }
+  
+  .cConfigFont2Prop1{
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+    font-weight: 700;
+    font-variation-settings: "opsz" 100;
+  }
+  
+  .cConfigFont3Prop1{ 
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 700;
+    font-variation-settings: "opsz" 100;
+  }
+  
+  .cConfigFont4Prop1{
+    font-size: 2.1rem;
+    line-height: 3.2rem;
+    font-weight: 400;   
+    font-variation-settings: "opsz" 0;
+  }
+  
+  .cConfigFont5Prop1{
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 400; 
+    font-variation-settings: "opsz" 0;  
+  }
+  
+  .cConfigFont6Prop1{
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-weight: 400; 
+    font-variation-settings: "opsz" 0;  
+  }
+  
+  .cConfigFont7Prop1{
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    font-weight: 700; 
+    font-variation-settings: "opsz" 0;  
+  }
+  
+  .cConfigFont8Prop1{    
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    font-weight: 600; 
+    font-variation-settings: "opsz" 0;  
+  }
+  
+  .cConfigFontSize1p4RemWeight600{    
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-weight: 600; 
+    font-variation-settings: "opsz" 0;  
+  }
+  
+  .cConfigFontSize1p2RemWeight400{    
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 400; 
+    font-variation-settings: "opsz" 0;  
+  }
+  
+  .cButtonType1{
+    border-radius: 5px;
+    border: transparent;
+    background-color:#8b3dff;
+    color: white;
+    font-family: "Canva Sans",Arial,sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-weight: 600;
+    font-variation-settings: "opsz" 0; 
+    padding: .9rem 1.4rem;
+    cursor: pointer;
+  }
+  
+  .cButtonType1:hover {
+    background-color: #a268fa;
+  }
+  
+  .cButtonType2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .cButtonType3{
+    border-radius: 5px;
+    border: transparent;
+    background-color: white;
+    font-family: "Canva Sans",Arial,sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+    font-variation-settings: "opsz" 0;   
+    cursor: pointer;
+  }
+  
+  .cButtonType3:hover {
+    background-color: rgba(64,87,109,.07);
+  }
+  
+  .cButtonTypeSvg1{
+    border-radius: 5px;
+    border: transparent;
+    background-color: inherit;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  .cButtonTypeSvg1:hover{
+    background-color: rgba(64,87,109,.07);
+  }
+  
+  .cButtonType4{
+    border-radius: 5px;
+    border: transparent;
+    background-color: rgba(64,87,109,.07);
+    color: #0d1216;
+    font-family: "Canva Sans",Arial,sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-weight: 600;
+    font-variation-settings: "opsz" 0;    
+    padding: .8rem 1.4rem;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .cButtonType4:hover{
+    background-color: rgb(0 0 0 / 14%);
+  }
+  /*--------------*/
+  .cModal{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+    background-color: rgba(30,41,51,.45);
+    z-index: 10;
+  }
+  
+  .c_ModalRegisterForm{
+    background-color: white;
+    max-height: 592px;    
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .c_ModalRegisterForm .c_ModalRegisterForm_DivForm, .c_ModalRegisterForm .c_ModalRegisterForm_DivImg{
+    max-width: 384px;
+  }
+  
+  .c_ModalRegisterForm_DivForm_Content{
+    margin: 32px;
+    row-gap: 16px;
+  }
+  
+  .c_ModalRegisterForm_DivForm_Content_DivButtons{
+    row-gap: 16px;
+  }
+  
+  .c_ModalRegisterForm_DivForm_Content_DivButtons, .c_ModalRegisterForm_DivForm_Content_DivButtons button{
+    width: 100%;
+  }
+  
+  .c_ModalRegisterForm_DivImg img{
+    width: 100%;
+  }
+  
+  /*--------------*/
+  .cDispFlexColumnCenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cDispFlexColumnCenterAlignCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cDispFlexColumnCenterAlignFlexStart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .cDispFlexColumnFlexStartAlignFlexStart{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .cDispFlexRowCenter{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cDispFlexRowCenterAlignCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cDispFlexRowCenterAlignFlexStart{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .cDispFlexRowFlexStartAlignCenter{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .cDispFlexRowFlexStartAlignFlexStart{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .cDispFlexRowSpaceBetweenAlignCenter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cDispFlexRowSpaceAroundAlignCenter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  /*---------------Parte Contenedor Header------------------*/
+  .cMainContainer_Header{
+    z-index: 1;
+    position: sticky;
+    top: 0px;
+    background-color: white; 
+    box-shadow: 0px -1px 3px 0px #aaaaaa; 
+    min-height: 72px;
+    padding-inline: 32px;
+  }
+  
+  .c_Header_DropDownOptions{
+    display: none;
+    position: relative;
+  }
+  
+  .c_Header_DropDownOptions .cButtonTypeSvg1{
+    margin-right: 16px;
+  }
+  
+  .c_Header_DropDownOptions_HoverMessage{
+    visibility: hidden;
+    background-color: #1f252a;
+    color: #1f252a;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 5px;
+    padding: 6px;
+    white-space: nowrap;
+  }
+  
+  .c_Header_ContainerOptions{
+    min-width: 0px;
+    margin-left: 30px;
+    margin-right: 48px;
+    position: relative;
+  }
+  
+  .c_Header_ContainerOptions_UL{
+    position: relative;
+    list-style: none;
+    column-gap: 4px;
+    margin: 0px;
+    padding: 0px;
+    white-space: nowrap;
+  }
+  
+  .c_Header_ContainerOptions_UL li{
+    position: relative;
+  }
+  
+  .c_Header_ContainerOptions_UL li button{
+    padding: 9px 12px;
+    border-radius: 4px;
+  }
+  
+  .c_Header_ContainerOptions_UL li button p{
+    margin-right: 3px;
+  }
+  
+  #id_Header_ContainerOptions_UL_Button3Points{
+    padding: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+  }
+  
+  .c_Header_ContainerOptions_UL_DivDropDown{
+    position: absolute;
+    left: 0;
+    height: 16px;
+  }
+  
+  .c_Header_ContainerOptions_UL_HideContainerDropDown{
+    visibility: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: absolute;
+    left: 0;
+    margin-top: 8px;
+    background-color: white;
+    box-shadow: 1px 1px 3px 1px #aaaaaa;
+    border-radius: 5px;
+  }
+  
+  /*--*/
+  .c_Header_CO_UL_HCDD_FormType1{
+    margin: 15px 15px;
+  }
+  
+  .c_Header_CO_UL_HCDD_FormType1_Title{
+    margin-bottom: 10px;
+    margin-left: 5px;
+  }
+  
+  .c_Header_CO_UL_HCDD_FormType1_Content{
+    column-gap: 60px;
+  }
+  
+  .c_Header_CO_UL_HCDD_FormType1_Content a{
+    white-space: nowrap;
+    text-decoration: none;
+    padding-block: 5px;
+    padding-left: 8px;
+  }
+  
+  
+  .c_Header_CO_UL_HCDD_FormType2{
+    display: grid;
+    column-gap: 16px;
+    margin: 15px;
+  }
+  
+  .c_Header_CO_UL_HCDD_FormType2_Form{
+    text-decoration: none;
+    width: 320px;
+    height: max-content;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  .c_Header_CO_UL_HCDD_FormType2_Form_Img img{
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  .c_Header_CO_UL_HCDD_FormType2_Form_Content_Title{
+    margin-bottom: 6px;
+  }
+  
+  .c_Header_CO_UL_HCDD_FormType3{
+    margin: 15px;
+    column-gap: 15px;
+  }
+  
+  .c_Header_CO_UL_HCDD_FormType3_Form{
+    text-decoration: none;
+    width: 260px;
+  }
+  
+  .c_Header_CO_UL_HCDD_FormType3_Form_Img{
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .c_Header_CO_UL_HCDD_FormType3_Form_Img img{
+    width: 256px;
+    height: 192px;
+    transition: transform .2s ease;
+  }
+  
+  .c_Header_CO_UL_HCDD_FormType3_Form_Content_Title{
+    margin-bottom: 6px;
+  }
+  
+  .c_Header_CO_UL_HCDD_FormType4{
+    margin: 15px;
+  }
+  
+  .c_Header_CO_UL_HCDD_FormType4_Title{
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .c_Header_CO_UL_HCDD_FormType2_Form_Content_Title svg, .c_Header_CO_UL_HCDD_FormType3_Form_Content_Title svg, .c_Header_CO_UL_HCDD_FormType4_Title svg{
+    vertical-align: middle;
+    margin-top: -1px;
+  }
+  
+  .c_Header_ContainerInput{
+    flex: 1 1 0;
+    min-width: 240px;
+  }
+  
+  .c_Header_ContainerInput_FlexInput{
+    height: 40px;
+    border: 1px solid rgba(43,59,74,.3);
+    border-radius: 5px;  
+    cursor: text;
+  }
+  
+  .c_Header_ContainerInput_FlexInput svg{
+    margin-inline: 4px;
+    min-width: 32px;
+  }
+  
+  .c_Header_ContainerInput_FlexInput input{
+    border-style: none;
+    font-family: "Canva Sans",Arial,sans-serif;
+    flex: 1 0 0;
+    min-height: 90%;
+    padding-right: 10px;
+  }
+  
+  .c_Header_FlexButtons{
+    column-gap: 16px;
+    margin-left: 8px;
+    height: 40px;
+  }
+  
+  .c_Header_FlexButtons .cButtonTypeSvg1{
+    color: #0d1216;
+  }
+  
+  .c_Header_FlexButtons button.cButtonType4{
+    white-space: nowrap;
+  }
+  
+  .c_Header_FlexButtons button.cButtonType1{
+    padding-inline: 19px;
+  }
+  
+  .c_Header_FlexButtons_HideButtons1{
+    display: none;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .c_Header_DropDownOptions{
+      display: flex;
+    }
+  
+    .c_Header_ContainerOptions{
+      display: none;
+    }
+  
+    .c_Header_ContainerInput{
+      margin-left: 15px;
+      min-width: 0px;
+    }
+  
+    .c_Header_ContainerInput_FlexInput input{
+      min-width: 0px;
+    }
+  
+    .c_Header_FlexButtons{
+      column-gap: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .cMainContainer_Header{    
+      padding: 0 16px 0 9px;
+    }
+  
+    .c_Header_Canva img{
+      width: 64px;
+    }
+  
+    .c_Header_ContainerInput_FlexInput, .c_Header_FlexButtons .cButtonType1, .c_Header_FlexButtons .cButtonTypeSvg1, .c_Header_FlexButtons .cButtonType4{
+      display: none;
+    }
+  
+    .c_Header_FlexButtons .cButtonTypeSvg1.c_Header_FlexButtons_HideButtons1{
+      display: flex;
+    }
+  
+    .c_Header_FlexButtons .cButtonType1.c_Header_FlexButtons_HideButtons1{
+      display: inline-block;
+    }
+  }
+  
+  /*---------------------Parte Main-------------------------*/
+  main{
+    margin-top: 60px;
+    padding-inline: 32px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    main{
+      margin-top: 48px;
+      padding-inline: 16px;
+    }
+  }
+  
+  /*-------------Parte Contenedor Principal 1---------------*/
+  .cMainContainer_PortadaInicial{
+    margin-bottom: 96px;
+  }
+  
+  .c_PortadaInicial_ContainerMain{
+    text-align: center;
+    row-gap: 24px;
+    margin: 0 0 64px;
+  }
+  
+  .c_PortadaInicial_Video{
+    max-width: 1000px;
+  }
+  
+  .c_PortadaInicial_Video video{
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .cMainContainer_PortadaInicial{
+      margin-bottom: 48px;
+    }
+  
+    .c_PortadaInicial_ContainerMain{
+      margin-bottom: 24px;
+    }
+  
+    .c_PortadaInicial_ContainerMain h1{
+      font-size: 3.2rem;
+      line-height: 4.2rem;
+    }
+  
+    .c_PortadaInicial_ContainerMain p{    
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+    }
+  
+    .c_PortadaInicial_ContainerMain button{
+      width: 100%;
+    }
+  }
+  
+  /*-------------Parte Contenedor Principal 2---------------*/
+  .cMainContainer_CanvaOptions{
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  
+  .c_CanvaOptions_ContMainPart_Title{
+    margin-bottom: 64px;
+  }
+  
+  .c_CanvaOptions_ContMainPart_Grid{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 80px;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .c_CanvaOptions_ContMainPart_Grid_LI{
+    list-style: none;
+    max-width: 280px;
+    min-width: 128px;
+    padding: 0 32px;
+  }
+  
+  .c_CanvaOptions_ContMainPart_Grid_LI_ContentText_TitleSvg, .c_CanvaOptions_ContMainPart_Grid_LI p{
+    margin-bottom: 24px;
+  }
+  
+  .c_CanvaOptions_ContMainPart_Grid_LI .cButtonType1{
+    width: 100%;
+    padding: 9px 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .c_CanvaOptions_ContMainPart_Grid_LI_ContentText{
+    flex: 1 0 0;
+  }
+  
+  .c_CanvaOptions_ContMainPart_Grid_LI_ContentText_TitleSvg svg{
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    color: #fbbe28;
+    flex: 1 0 32px;
+    max-width: fit-content;
+  }
+  
+  @media screen and (max-width:600px) {
+    .c_CanvaOptions_ContMainPart_Title{
+      margin-bottom: 32px;
+      text-align: left;
+    }
+  
+    .c_CanvaOptions_ContMainPart_Title h2{
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+    }
+  
+    .c_CanvaOptions_ContMainPart_Grid{
+      grid-template-columns: auto;
+      text-align: left;
+      row-gap: 32px;
+      margin-bottom: 48px;
+    }
+  
+    .c_CanvaOptions_ContMainPart_Grid_LI{
+      max-width: 100%;
+      padding: 0;
+    }
+  
+    .c_CanvaOptions_ContMainPart_Grid_LI_ContentText_TitleSvg, .c_CanvaOptions_ContMainPart_Grid_LI p{
+      margin-bottom: 16px;
+    }
+  
+    .c_CanvaOptions_ContMainPart_Grid_LI_ContentText_TitleSvg{
+      justify-content: flex-start;
+      align-items: center;
+    }
+  
+    .c_CanvaOptions_ContMainPart_Grid_LI_ContentText_TitleSvg h4{
+      font-size: 2rem;
+      line-height: 2.6rem;
+    }
+  
+    .c_CanvaOptions_ContMainPart_Grid_LI_ContentText_TitleSvg svg{
+      width: 24px;
+      height: 24px;
+    }
+  }
+  
+  .c_CanvaOptions_IntermediateText{
+    margin: 0 0 48px;
+  }
+  
+  .c_CanvaOptions_Logos{
+    max-width: 1288px;
+    margin: 0 auto;    
+    padding: 0;
+  }
+  
+  .c_CanvaOptions_Logos_List{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .c_CanvaOptions_Logos_List_Item{
+    margin-inline: 15px;
+  }
+  
+  .c_CanvaOptions_Logos_List_Item img{
+    max-height: 48px;
+    max-width: 100%;
+  }
+  
+  @media screen and (max-width: 900px){
+    .c_CanvaOptions_Logos_List{
+      flex-wrap: wrap;
+    }
+  
+    .c_CanvaOptions_Logos_List_Item{
+      height: 80px;
+      width: 33.33333%;
+      align-items: center;
+      margin: 0;
+    }
+  }
+  
+  @media screen and (max-width: 600px){
+    .c_CanvaOptions_IntermediateText{
+      margin: 0 0 24px;
+    }
+  
+    .c_CanvaOptions_Logos_List_Item{
+      width: 50%;
+    }
+  }
+  
+  @media screen and (max-width: 400px){
+    .c_CanvaOptions_Logos_List_Item{
+      width: 100%;
+    }
+  }
+  
+  /*-------------Parte Contenedor Principal 3---------------*/
+  .cMainContainer_FormTextAndImage{
+    max-width: 1288px;
+    margin: 0 auto 96px;  
+  }
+  
+  .c_FormTextAndImage_Grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .c_FormTextAndImage_Grid video, .c_FormTextAndImage_Grid img{
+    width: 100%;
+  }
+  
+  .c_FormTextAndImage_Grid_FormText{
+    row-gap: 24px;
+    margin: 64px;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .c_FormTextAndImage_Grid_FormText{
+      margin: 32px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .cMainContainer_FormTextAndImage{
+      row-gap: 64px; 
+      margin-bottom: 64px; 
+    }
+  
+    .c_FormTextAndImage_Grid{
+      grid-template-columns: 1fr;
+      row-gap: 24px;
+    }
+  
+    .c_FormTextAndImage_Grid:nth-child(2){
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+    .c_FormTextAndImage_Grid_FormText{
+      row-gap: 16px;
+      margin: 0;
+    }
+  
+    .c_FormTextAndImage_Grid_FormText h2{
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+    }
+  }
+  
+  /*-------------Parte Contenedor Principal 4---------------*/
+  .cMainContainer_FormPlantillas{
+    margin-bottom: 96px;
+  }
+  
+  .c_FormPlantillas_Title{
+    row-gap: 1.6rem;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+  
+  .c_FormPlantillas_Grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);  
+    gap: 20px;  
+    max-width: 1288px;
+    margin: 0 auto 58px;
+  }
+  
+  .c_FormPlantillas_Grid_FlexColumn{
+    row-gap: 24px;
+  }
+  
+  .c_FormPlantillas_Grid_FlexColumn_ContainerPlantilla{
+    position: relative;
+    width: 100%;
+  }
+  
+  .c_FormPlantillas_Grid_FlexColumn_ContainerPlantilla img{
+    width: 100%;
+    border-radius: 8px;    
+    box-shadow: 0px 0px 3px 0px #aaaaaa;
+  }
+  
+  @media screen and (max-width:1200px){
+    .c_FormPlantillas_Grid{
+      grid-template-columns: repeat(4, 1fr); 
+    }
+  }
+  
+  @media screen and (max-width:900px){
+    .c_FormPlantillas_Grid{
+      grid-template-columns: repeat(3, 1fr); 
+    }
+  }
+  
+  @media screen and (max-width:600px){
+    .cMainContainer_FormPlantillas{
+      margin-bottom: 64px;
+    }
+  
+    .c_FormPlantillas_Title{
+      text-align: left;
+      align-items: flex-start;
+    }
+  
+    .c_FormPlantillas_Title h2{    
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+    }
+  
+    .c_FormPlantillas_Grid{
+      grid-template-columns: repeat(2, 1fr); 
+      margin-bottom: 24px;
+    }
+  
+    .c_FormPlantillas_ButtonExplore a{
+      width: 100%;
+    }
+  }
+  
+  /*-------------Parte Contenedor Principal 5---------------*/
+  .cMainContainer_PruebaCanvaEquipos{
+    margin-bottom: 160px;
+  }
+  
+  .c_PruebaCanvaEquipos_Title{
+    row-gap: 24px;
+    max-width: 600px;
+    margin: 0 auto 32px; 
+    text-align: center;
+  }
+  
+  .c_PruebaCanvaEquipos_ContainerMain{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  
+    column-gap: 32px;
+    max-width: 1288px;
+    margin: 0 auto 48px;  
+  }
+  
+  .c_PruebaCanvaEquipos_ContainerMain_FormText{
+    max-width: 400px;
+    row-gap: 48px;
+    margin: auto;
+  }
+  
+  .c_PruebaCanvaEquipos_ContainerMain_FormText svg{
+    margin-right: 16px;
+    flex: 1 0 32px;
+  }
+  
+  .c_PruebaCanvaEquipos_ContainerMain_Image{
+    margin: auto;
+  }
+  
+  .c_PruebaCanvaEquipos_ContainerMain_Image img{
+    width: 100%;
+  }
+  
+  @media screen and (max-width:600px) {
+    .cMainContainer_PruebaCanvaEquipos{
+      margin-bottom: 96px;
+    }
+  
+    .c_PruebaCanvaEquipos_Title{
+      margin-bottom: 24px;
+      text-align: left;
+      align-items: flex-start;
+    }
+  
+    .c_PruebaCanvaEquipos_Title h2{
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+    }
+  
+    .c_PruebaCanvaEquipos_ContainerMain{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+    .c_PruebaCanvaEquipos_ContainerMain_FormText{
+      max-width: 100%;
+      margin-inline: 16px;
+    }
+  
+    .c_PruebaCanvaEquipos_ContainerMain_Image{
+      margin-bottom: 32px;
+    }
+  
+    .c_PruebaCanvaEquipos_Button button{
+      width: 100%;
+    }
+  }
+  
+  /*-------------Parte Contenedor Principal 6---------------*/
+  .cMainContainer_SlideForms{
+    margin-bottom: 96px;
+  }
+  
+  .c_SlideForms_Title{
+    row-gap: 8px;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  
+  .c_SlideForms_ContMain{
+    position: relative;
+  }
+  
+  .c_SlideForms_ContMain_ContShow{
+    overflow-x: hidden;
+  }
+  
+  .c_SlideForms_ContMain_ContShow_ContForms{
+    transition: transform .5s ease-out;
+    column-gap: 24px;
+  }
+  
+  .c_SlideForms_ContMain_ContShow_ContForms_Form{
+    width: 304px;
+    row-gap: 8px;
+  }
+  
+  .c_SlideForms_ContMain_ContShow_ContForms_Form_Img{
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .c_SlideForms_ContMain_ContShow_ContForms_Form_Img img{
+    width: 100%;
+  }
+  
+  .c_SlideForms_ContMain_ContShow_ContForms_Form_TextContent p{    
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+  
+  .c_SlideForms_ContainerMain_ButtonSlide{
+    position: absolute;
+    top: 43%;
+    background-color: white;
+    border: 1px solid rgba(43,59,74,.3);
+    border-radius: 50%;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .c_SlideForms_Title h2{
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+    }
+  
+    .c_SlideForms_ContainerMain_ButtonSlide{
+      display: none;
+    }
+  }
+  
+  /*-------------Parte Contenedor Principal 7---------------*/
+  .c_FinalDescriptions_GridDescriptions{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 32px 32px 64px;
+    border-top: 1px solid rgba(43,59,74,.3);
+  }
+  
+  .c_FinalDescriptions_GridDescription_Form_TextAndSvg{
+    display: flex;
+    width: 100%;
+    pointer-events: none;
+    padding-block: 16px;
+  }
+  
+  .c_FinalDescriptions_GridDescription_Form_TextAndSvg h3{
+    flex: 1 1 0;
+  }
+  
+  .c_FinalDescriptions_GridDescription_Form_TextAndSvg svg{
+    visibility: hidden;
+  }
+  
+  .c_FinalDescriptions_GridDescription_Form_Wrapper{
+    overflow: hidden;
+    transition: height .5s ease-in-out;
+  }
+  
+  .c_FinalDescriptions_GridDescription_Form_Wrapper_UL{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .c_FinalDescriptions_GridDescription_Form_Wrapper_UL li:not(:last-child){
+    margin-bottom: 8px;
+  }
+  
+  .c_FinalDescriptions_GridDescription_Form_Wrapper_UL li:hover{
+    color: #8b3dff;
+  }
+  
+  .c_FinalDescriptions_GridDescription_Form_Wrapper_UL li a{
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  @media screen and (max-width:900px) {
+    .c_FinalDescriptions_GridDescriptions{
+      grid-template-columns: 1fr;
+      padding: 16px;
+    }
+  
+    .c_FinalDescriptions_GridDescription_Form_TextAndSvg{
+      pointer-events: all;
+      cursor: pointer;
+      user-select: none;
+    }
+  
+    .c_FinalDescriptions_GridDescription_Form_TextAndSvg svg{
+      visibility: visible;
+    }
+  
+    .c_FinalDescriptions_GridDescription_Form_Wrapper{
+      height: 0px;
+    }
+  
+    .c_FinalDescriptions_GridDescription_Form_Wrapper_UL{
+      margin-bottom: 8px;
+    }
+  
+    .c_FinalDescriptions_GridDescription_Form_Wrapper_UL li:not(:last-child){
+      margin-bottom: 16px;
+    }
+  }
+  
+  .c_FinalDescriptions_FlexForm{
+    justify-content: space-between;
+    padding-block: 24px;
+    margin-inline: 32px;
+    border-top: 1px solid rgba(43,59,74,.3);
+  }
+  
+  .c_FinalDescriptions_FlexForm_ContainerButton{
+    position: relative;
+    height: 100%;
+  }
+  
+  .c_FinalDescriptions_FlexForm_ContainerButton_Wrapper{
+    position: absolute;
+    bottom: 45px;
+    z-index: 1;
+    min-width: 213px;
+    box-shadow: 0px 0px 6px 0px #aaaaaa;
+    border-radius: 5px;    
+    background-color: white;
+    visibility: hidden;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .c_FinalDescriptions_FlexForm_ContainerButton_Wrapper *:focus{
+    outline: none;
+  }
+  
+  .id_FinalDescriptions_FlexForm_ContainerButton_Wrapper_ContainerInput{
+    align-items: center;
+    height: 40px;
+    margin: 12px;
+    border: 1px solid rgba(43,59,74,.3);
+    border-radius: 5px;  
+    cursor: text;
+  }
+  
+  .id_FinalDescriptions_FlexForm_ContainerButton_Wrapper_ContainerInput svg{
+    padding-inline: 7px;
+  }
+  
+  .id_FinalDescriptions_FlexForm_ContainerButton_Wrapper_ContainerInput svg path{
+    pointer-events: none;
+  }
+  
+  .id_FinalDescriptions_FlexForm_ContainerButton_Wrapper_ContainerInput input{
+    border-style: none;
+    width: 100%;
+    min-height: 90%;
+    font-family: "Canva Sans",Arial,sans-serif;
+  }
+  
+  .c_FinalDescriptions_FlexForm_ContainerButton_Wrapper_ListBox{
+    max-height: 236px;    
+    min-width: 100%;
+    padding: 0;
+    margin: 0; 
+    border-style: none;
+    border-top: 1px solid rgba(43,59,74,.3);
+    overflow-x: hidden;
+    align-items: baseline;    
+    list-style: none;
+  }
+  
+  .c_FinalDescriptions_FlexForm_ContainerButton_Wrapper_ListBox li{
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    min-width: 100%;
+    padding-left: 16px;
+    white-space: nowrap;
+    user-select: none;
+  }
+  
+  .c_FinalDescriptions_FlexForm_ContainerButton_Wrapper_ListBox li:hover{
+    background-color: rgba(224, 224, 224, 0.993);
+  }
+  
+  .c_FinalDescriptions_FlexForm_ContainerButton_Button{
+    height: 40px;
+    column-gap: 8px;  
+    padding-inline: 12px;
+    font-family: "Canva Sans",Arial,sans-serif;
+    background-color: inherit;
+    border-radius: 4px;
+    border: 1px solid;
+    border-color:rgba(43,59,74,.3);
+    cursor: pointer;
+  }
+  
+  .c_FinalDescriptions_FlexForm_ContainerButton_Button:hover{
+    border-color:#99a2a9 !important;
+  }
+  
+  .c_FinalDescriptions_FlexForm_ContainerButton_Button p, .c_FinalDescriptions_FlexForm_ContainerButton_Button svg{
+    pointer-events: none;
+  }
+  
+  .c_FinalDescriptions_FlexForm_Container{
+    justify-content: space-between;    
+    width: 63.333%;
+  }
+  
+  .c_FinalDescriptions_FlexForm_ContainerText{
+    row-gap: 8px;    
+    text-align: center;
+  }
+  
+  .c_FinalDescriptions_FlexForm_ContainerText_CCP{
+    column-gap: 8px;  
+  }
+  
+  .c_FinalDescriptions_FlexForm_ContainerText_CCP a:hover{
+    color: #8b3dff; 
+  }
+  
+  .c_FinalDescriptions_FlexForm_ContainerImgs{
+    align-items: center;
+    column-gap: 8px;
+  }
+  
+  @media screen and (max-width:900px) {
+    .c_FinalDescriptions_FlexForm{
+      flex-direction: column;
+      align-items: center;
+      margin-inline: 0px;
+    }
+  
+    .c_FinalDescriptions_FlexForm_Container{
+      flex-direction: column-reverse;
+      row-gap: 9px;
+      width: 100%;
+    }
+  
+    .c_FinalDescriptions_FlexForm_ContainerButton_Button{
+      margin-bottom: 16px;
+    }
+  
+    .c_FinalDescriptions_FlexForm_ContainerText_CCP{
+      flex-direction: column;
+      align-items: center;
+      row-gap: 8px;
+    }
+  
+    .c_FinalDescriptions_FlexForm_ContainerText_CCP span{
+      display: none;
+    }
+  }
+  
+  /*-------------Parte Contenedor Principal 8---------------*/
+  .cMainContainer_StickyBottomPanel{
+    z-index: 1;
+    position: sticky;
+    bottom: 0px;
+    background-color: white;
+  }
+  
+  .c_StickyBottomPanel_Container{
+    padding: 16px;
+    box-shadow: 0px 0px 2px 2px #f5f2f291;
+    justify-content: space-around;
+  }
+  
+  .c_StickyBottomPanel_Panel_ContainerP{
+    max-width: 520px;
+  }
+  
+  .c_StickyBottomPanel_Panel_ContainerButtons{
+    column-gap: 8px;  
+    align-items: center;  
+  }
+  
+  .c_StickyBottomPanel_Panel_ContainerButtons button{
+    height: 40px;
+  }
+  
+  @media screen and (max-width:900px) {
+    .c_StickyBottomPanel_Panel_ContainerP{
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width:600px) {
+    .c_StickyBottomPanel_Panel_ContainerButtons button.cButtonType1{
+      display: none;
+    }
+  }
+  
+  
+  
+  
+  
+  
