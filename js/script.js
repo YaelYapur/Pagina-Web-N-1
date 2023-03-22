@@ -155,6 +155,13 @@ function changeForm(form1Class, form2Class){
     //
     form1.style.display = "none";
     form2.style.display = "flex";
+    //
+    if(form1Class == 'c_ModalRegisterForm_DivForm_Content' && form2Class == 'c_ModalRegisterForm_DivForm_RegisterAnotherWays'){
+        // c_ModalRegisterForm_DivForm_Content_DivButtons
+        const containerButtons = document.querySelector(`.${form1Class} .c_ModalRegisterForm_DivForm_Content_DivButtons`);
+        console.log("dawddafwaf: ", containerButtons);
+
+    }
 }
 
 function openWindow_ModalRegisterForm_DivForm_Content_DivButtons(elementButton){

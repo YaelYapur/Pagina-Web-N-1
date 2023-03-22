@@ -220,61 +220,72 @@ h1, h2, h3, h4, p{
 }
 
 .c_ModalRegisterForm{
-  background-color: white;
-  max-height: 592px;   
+  background-color: white;    
+  height: 592px;
+  max-height: 90vh;
   min-width: 160px; 
   border-radius: 8px;
   margin: 16px 48px;
   overflow: hidden;
+}
+
+.c_ModalRegisterForm > .c_ModalRegisterForm_DivForm, .c_ModalRegisterForm > .c_ModalRegisterForm_DivImg{
+  width: 384px;
+}
+
+.c_ModalRegisterForm_DivForm{
+  height: inherit;
+  overflow: hidden;
   overflow-y: scroll;
 }
 
-.c_ModalRegisterForm::-webkit-scrollbar{
+.c_ModalRegisterForm_DivForm::-webkit-scrollbar{
   display: none;
 }
 
-.c_ModalRegisterForm .c_ModalRegisterForm_DivForm, .c_ModalRegisterForm .c_ModalRegisterForm_DivImg{
-  max-width: 384px;    
-  min-width: inherit;
-}
-
-.c_ModalRegisterForm_DivForm_Content{
+.c_ModalRegisterForm_DivForm > *{
+  width: -webkit-fill-available;
   margin: 32px;
   row-gap: 16px;
+}
+
+.c_ModalRegisterForm_DivForm_Content_DivButtons, .c_ModalRegisterForm_DivForm_Content_DivButtons button,
+.c_ModalRegisterForm_DivForm_Content > button:first-of-type{
+  width: 100%;
 }
 
 .c_ModalRegisterForm_DivForm_Content_DivButtons{
   row-gap: 16px;
 }
 
-.c_ModalRegisterForm_DivForm_Content_DivButtons button:not(:last-child):disabled:hover{
+.c_ModalRegisterForm_DivForm_Content_DivButtons button:disabled:hover{
   background-color: rgba(64,87,109,.07);
 }
 
-.c_ModalRegisterForm_DivForm_Content_DivButtons button:last-child{
-  background-color: inherit;
-}
-
-.c_ModalRegisterForm_DivForm_Content_DivButtons button:last-child:hover{
-  background-color: rgb(0 0 0 / 14%);
-}
-
-.c_ModalRegisterForm_DivForm_Content_DivButtons button:not(:last-child) p{
+.c_ModalRegisterForm_DivForm_Content_DivButtons button p{
   flex: 1 0 0;
   margin-right: 24px;
 }
 
-.c_ModalRegisterForm_DivForm_Content_DivButtons button:not(:last-child) svg.circleSvg{
+.c_ModalRegisterForm_DivForm_Content_DivButtons button svg.circleSvg{
   display: none;
 }
 
-.c_ModalRegisterForm_DivForm_Content_DivButtons button:not(:last-child):disabled{
+.c_ModalRegisterForm_DivForm_Content_DivButtons button:disabled{
   color: rgba(30,41,51,.45);
   cursor: not-allowed;
 }
 
-.c_ModalRegisterForm_DivForm_Content_DivButtons button:not(:last-child):disabled.stateFlag__Clicked__c_ModalRegisterForm_DivForm_Content_DivButtons{
+.c_ModalRegisterForm_DivForm_Content_DivButtons button:disabled.stateFlag__Clicked__c_ModalRegisterForm_DivForm_Content_DivButtons{
   cursor: wait;
+}
+
+.c_ModalRegisterForm_DivForm_Content > button:first-of-type{
+  background-color: inherit;
+}
+
+.c_ModalRegisterForm_DivForm_Content > button:first-of-type:hover{
+  background-color: rgb(0 0 0 / 14%);
 }
 
 .c_ModalRegisterForm_DivForm_Content_FinalButton{
@@ -295,17 +306,8 @@ h1, h2, h3, h4, p{
   margin-right: 8px;
 }
 
-.c_ModalRegisterForm_DivForm_Content_DivButtons, .c_ModalRegisterForm_DivForm_Content_DivButtons button{
-  width: 100%;
-}
-
-.c_ModalRegisterForm_DivForm_RegisterMail, .c_ModalRegisterForm_DivForm_RegisterAnotherWays{
-  margin: 32px;
-  row-gap: 16px;
-}
-
-.c_ModalRegisterForm_DivForm_RegisterMail svg, .c_ModalRegisterForm_DivForm_RegisterAnotherWays svg{
-  flex: 1 0 24px;
+.c_ModalRegisterForm_DivForm_gc_TitleButtonBack button svg{
+  vertical-align: middle;
   margin-right: -8px;
 }
 
