@@ -145,6 +145,56 @@ function showModal(){
     });
 }
 
+function changeForm(form1Class, form2Class){
+    //
+    console.log("asd; ", `.${form1Class}`,`.${form2Class}`);
+    const form1 = document.querySelector(`.${form1Class}`);
+    const form2 = document.querySelector(`.${form2Class}`);
+    console.log("asd2; ", form1,form2);
+    form2.getAttribute
+    //
+    form1.style.display = "none";
+    form2.style.display = "flex";
+}
+
+function openWindow_ModalRegisterForm_DivForm_Content_DivButtons(elementButton){
+    //
+    console.log("qwe: ",elementButton,elementButton.getAttribute("data-url"));
+    //
+    const openedWindow = window.open(elementButton.getAttribute("data-url"),"_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=500,height=600");
+    //
+    for (let i = 0; i < elementButton.children.length - 1; i++) {
+        elementButton.children[i].style.display = "none";
+    }
+    elementButton.lastElementChild.style.display = "block";
+    elementButton.classList.add("stateFlag__Clicked__c_ModalRegisterForm_DivForm_Content_DivButtons");
+    //
+    console.log("dewfefef", elementButton.parentElement.children);
+    for (const button of elementButton.parentElement.children) {
+        button.disabled = true;
+    }
+    //
+    const timer = setInterval(() => {
+        if (openedWindow.closed) {
+            clearInterval(timer);
+            //
+            for (let i = 0; i < elementButton.children.length - 1; i++) {
+                elementButton.children[i].style.display = "block";
+            }
+            elementButton.lastElementChild.style.display = "none";
+            elementButton.classList.remove("stateFlag__Clicked__c_ModalRegisterForm_DivForm_Content_DivButtons");
+            //
+            for (const button of elementButton.parentElement.children) {
+                button.disabled = false;
+            }
+        }
+    }, 500);
+}
+
+function dasd(){
+    //
+    console.log("qfafas2: ",openedWindow, openedWindow.closed);
+}
 
 //---------------------------------------------------------------------------------------------------------------------------------------------//
 //-------------------------------------------------------Area de las funciones-----------------------------------------------------------------//

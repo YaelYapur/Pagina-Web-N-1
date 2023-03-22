@@ -97,6 +97,20 @@ h1, h2, h3, h4, p{
   font-variation-settings: "opsz" 0;  
 }
 
+.cConfigFontSize1p4RemWeight400{
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-weight: 400; 
+  font-variation-settings: "opsz" 0;  
+}
+
+.cConfigFontSize1p2RemWeight600{    
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-weight: 600; 
+  font-variation-settings: "opsz" 0;  
+}
+
 .cConfigFontSize1p2RemWeight400{    
   font-size: 1.2rem;
   line-height: 2rem;
@@ -183,6 +197,14 @@ h1, h2, h3, h4, p{
 .cButtonType4:hover{
   background-color: rgb(0 0 0 / 14%);
 }
+
+.cButtonTypeQuitDefaultStyle1{
+  border: transparent;
+  background-color: inherit;
+  padding: 0;
+  cursor: pointer;
+}
+
 /*--------------*/
 .cModal{
   display: none;
@@ -199,13 +221,21 @@ h1, h2, h3, h4, p{
 
 .c_ModalRegisterForm{
   background-color: white;
-  max-height: 592px;    
+  max-height: 592px;   
+  min-width: 160px; 
   border-radius: 8px;
+  margin: 16px 48px;
   overflow: hidden;
+  overflow-y: scroll;
+}
+
+.c_ModalRegisterForm::-webkit-scrollbar{
+  display: none;
 }
 
 .c_ModalRegisterForm .c_ModalRegisterForm_DivForm, .c_ModalRegisterForm .c_ModalRegisterForm_DivImg{
-  max-width: 384px;
+  max-width: 384px;    
+  min-width: inherit;
 }
 
 .c_ModalRegisterForm_DivForm_Content{
@@ -217,12 +247,116 @@ h1, h2, h3, h4, p{
   row-gap: 16px;
 }
 
+.c_ModalRegisterForm_DivForm_Content_DivButtons button:not(:last-child):disabled:hover{
+  background-color: rgba(64,87,109,.07);
+}
+
+.c_ModalRegisterForm_DivForm_Content_DivButtons button:last-child{
+  background-color: inherit;
+}
+
+.c_ModalRegisterForm_DivForm_Content_DivButtons button:last-child:hover{
+  background-color: rgb(0 0 0 / 14%);
+}
+
+.c_ModalRegisterForm_DivForm_Content_DivButtons button:not(:last-child) p{
+  flex: 1 0 0;
+  margin-right: 24px;
+}
+
+.c_ModalRegisterForm_DivForm_Content_DivButtons button:not(:last-child) svg.circleSvg{
+  display: none;
+}
+
+.c_ModalRegisterForm_DivForm_Content_DivButtons button:not(:last-child):disabled{
+  color: rgba(30,41,51,.45);
+  cursor: not-allowed;
+}
+
+.c_ModalRegisterForm_DivForm_Content_DivButtons button:not(:last-child):disabled.stateFlag__Clicked__c_ModalRegisterForm_DivForm_Content_DivButtons{
+  cursor: wait;
+}
+
+.c_ModalRegisterForm_DivForm_Content_FinalButton{
+  border: transparent;
+  color: rgba(13,18,22,.86);
+  background-color: inherit;
+  font-family: "Canva Sans",Arial,sans-serif; 
+  cursor: pointer;
+  text-align: initial;
+}
+
+.c_ModalRegisterForm_DivForm_Content_FinalButton:hover{
+  color: rgba(13,18,22,.7);
+}
+
+.c_ModalRegisterForm_DivForm_Content_FinalButton svg{
+  flex: 1 0 24px;
+  margin-right: 8px;
+}
+
 .c_ModalRegisterForm_DivForm_Content_DivButtons, .c_ModalRegisterForm_DivForm_Content_DivButtons button{
   width: 100%;
 }
 
+.c_ModalRegisterForm_DivForm_RegisterMail, .c_ModalRegisterForm_DivForm_RegisterAnotherWays{
+  margin: 32px;
+  row-gap: 16px;
+}
+
+.c_ModalRegisterForm_DivForm_RegisterMail svg, .c_ModalRegisterForm_DivForm_RegisterAnotherWays svg{
+  flex: 1 0 24px;
+  margin-right: -8px;
+}
+
+.c_ModalRegisterForm_DivForm_RegisterMail_InputForm, .c_ModalRegisterForm_DivForm_RegisterMail_InputForm button{
+  width: 100%;
+}
+
+.c_ModalRegisterForm_DivForm_RegisterMail_InputForm input{
+  border-radius: 4px;
+  border: 1px solid rgba(43,59,74,.3);
+  box-sizing: border-box;
+  height: 40px;
+  width: -webkit-fill-available;
+  font-family: "Canva Sans",Arial,sans-serif; 
+  margin: 4px 0px 16px;
+  padding: 0 0 0 10px;    
+  outline: none;
+}
+
 .c_ModalRegisterForm_DivImg img{
   width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .c_ModalRegisterForm_DivImg{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cModal{
+    justify-content: flex-start;
+  }
+}
+
+.circleSvg{
+	stroke: gray;
+  stroke-width: 2;
+  stroke-linecap: round;
+	fill: none;
+}
+
+.circleAnimation{
+	transform-origin: center;
+  stroke-dasharray: 20 35;
+	animation: rotation .5s linear infinite;
+}
+
+@keyframes rotation {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /*--------------*/

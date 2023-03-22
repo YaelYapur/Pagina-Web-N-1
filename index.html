@@ -168,7 +168,7 @@
   <!--/Modal panel/-->
   <div class="cModal">
     <div class="c_ModalRegisterForm cDispFlexRowCenterAlignFlexStart">
-      <div class="c_ModalRegisterForm_DivForm cDispFlexColumnCenterAlignCenter">
+      <div class="c_ModalRegisterForm_DivForm cDispFlexColumnCenterAlignFlexStart">
         <div class="c_ModalRegisterForm_DivForm_Content cDispFlexColumnCenterAlignCenter">
           <h3 class="cConfigFont3Prop1 cTextColorBlack1">
             Iniciá sesión o registrate en cuestión de segundos
@@ -177,34 +177,40 @@
             Usá tu correo electrónico u otro servicio para continuar con Canva (¡es gratis!)
           </p>
           <div class="c_ModalRegisterForm_DivForm_Content_DivButtons cDispFlexColumnCenterAlignCenter">
-            <button class="cButtonType4 cDispFlexRowCenterAlignCenter">
+            <button class="cButtonType4 cDispFlexRowCenterAlignCenter" onclick="openWindow_ModalRegisterForm_DivForm_Content_DivButtons(this)" data-url="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?state=670bc897-4af3-4d23-bb9d-570d7652466e&access_type=offline&prompt=consent&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&response_type=code&client_id=779010036194-lf6spugv22vvj41pqjdj4d8k2tq7o5fd.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.canva.com%2Foauth%2Fauthorized%2Fgoogle&service=lso&o2v=2&flowName=GeneralOAuthFlow">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
                 <path fill="#4285f4" d="M386 400c45-42 65-112 53-179H260v74h102c-4 24-18 44-38 57z"></path>
                 <path fill="#34a853" d="M90 341a192 192 0 0 0 296 59l-62-48c-53 35-141 22-171-60z"></path>
                 <path fill="#fbbc02" d="M153 292c-8-25-8-48 0-73l-63-49c-23 46-30 111 0 171z"></path>
                 <path fill="#ea4335" d="M153 219c22-69 116-109 179-50l55-54c-78-75-230-72-297 55z"></path>
               </svg>
-              <p class="cConfigFontSize1p4RemWeight600 cTextColorBlack1">
+              <p class="cConfigFontSize1p4RemWeight600">
                 Usar Google
               </p>
+              <svg class="circleSvg" width="24" height="24" viewBox="0 0 24 24">
+                <circle class="circleAnimation" cx="12" cy="12" r="8"></circle>
+              </svg>
             </button>
-            <button class="cButtonType4 cDispFlexRowCenterAlignCenter">
+            <button class="cButtonType4 cDispFlexRowCenterAlignCenter" onclick="openWindow_ModalRegisterForm_DivForm_Content_DivButtons(this)" data-url="https://www.facebook.com/login.php?skip_api_login=1&api_key=525265914179580&kid_directed_site=0&app_id=525265914179580&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv11.0%2Fdialog%2Foauth%3Fstate%3D2e4d40df-8744-40d2-a9fd-9b5290cf072b%26scope%3Demail%252Cpublic_profile%26response_type%3Dcode%26client_id%3D525265914179580%26redirect_uri%3Dhttps%253A%252F%252Fwww.canva.com%252Foauth%252Fauthorized%252Ffacebook%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D9125efd2-c047-4c94-ad39-e2a8c95b7769%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.canva.com%2Foauth%2Fauthorized%2Ffacebook%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D2e4d40df-8744-40d2-a9fd-9b5290cf072b%23_%3D_&display=page&locale=es_ES&pl_dbl=0">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="#1877f2" d="M21.5 12.058c0-5.28-4.253-9.558-9.5-9.558s-9.5 4.279-9.5 9.558c0 4.771 3.473 8.725 8.016 9.442v-6.68H8.104v-2.762h2.412V9.952c0-2.395 1.417-3.718 3.588-3.718 1.04 0 2.126.186 2.126.186v2.352h-1.198c-1.18 0-1.548.738-1.548 1.494v1.792h2.635l-.421 2.763h-2.214V21.5c4.543-.717 8.016-4.67 8.016-9.442z"></path>
               </svg>
-              <p class="cConfigFontSize1p4RemWeight600 cTextColorBlack1">
+              <p class="cConfigFontSize1p4RemWeight600">
                 Usar Facebook
               </p>
+              <svg class="circleSvg" width="24" height="24" viewBox="0 0 24 24">
+                <circle class="circleAnimation" cx="12" cy="12" r="8"></circle>
+              </svg>
             </button>
             <button class="cButtonType4 cDispFlexRowCenterAlignCenter">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="currentColor" file-rule="evenodd" d="M20.37 5.03A2 2 0 0 1 22 7v10a2 2 0 0 1-1.96 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h16.1H4zm.13 2.07-4.53 5.31 4.53 4.63a.5.5 0 0 0 0-.04V7.1zm-17-.14a.5.5 0 0 0 0 .04v10a.5.5 0 0 0 0 .04l4.59-4.7L3.5 6.97zm5.57 6.53-3.92 4 13.7.01L15 13.56a4 4 0 0 1-5.93-.07zm9.88-6.99H5l5.07 5.96a2.5 2.5 0 0 0 3.81 0l5.07-5.96z"></path>
               </svg>
-              <p class="cConfigFontSize1p4RemWeight600 cTextColorBlack1"> 
+              <p class="cConfigFontSize1p4RemWeight600"> 
                 Usar mi correo
               </p>
             </button>
-            <button class="cButtonType4 cDispFlexRowCenterAlignCenter" style="background-color: inherit;">
+            <button class="cButtonType4 cDispFlexRowCenterAlignCenter" onclick="changeForm('c_ModalRegisterForm_DivForm_Content','c_ModalRegisterForm_DivForm_RegisterAnotherWays')">
               <p class="cConfigFontSize1p4RemWeight600 cTextColorBlack1">
                 Continuar de otra forma
               </p>
@@ -217,14 +223,93 @@
             <a href="https://www.canva.com/policies/privacy-policy/" target="_blank" style="color: inherit;">Política de privacidad</a>
             de Canva.
           </p>
-          <a class="cDispFlexRowCenterAlignFlexStart">
+          <button class="c_ModalRegisterForm_DivForm_Content_FinalButton cDispFlexRowFlexStartAlignFlexStart" onclick="changeForm('c_ModalRegisterForm_DivForm_Content','c_ModalRegisterForm_DivForm_RegisterMail')">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path fill="currentColor" fill-rule="evenodd" d="M4 18.5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 1 .5-.5h6.5c.275 0 .5.225.5.5v13.5H4Zm8.5 1.497V20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6.5c1.102 0 2 .895 2 2v3.997h2L20 9c1.105 0 2 .892 2 2v7l-1.5-.001V11c0-.278-.222-.5-.5-.5l-3.126-.001-4.374-.002v8l7.5.003a.5.5 0 0 0 .5-.5H22a2 2 0 0 1-2 2l-7.5-.003ZM5 7.497h4.5v-1.5H5v1.5Zm0 3h4.5v-1.5H5v1.5Zm4.5 3H5v-1.5h4.5v1.5Zm-4.5 3h4.5v-1.5H5v1.5Zm11-3h-2v-1.5h2v1.5Zm0 3h-2v-1.5h2v1.5Zm3-3h-2v-1.5h2v1.5Zm0 3h-2v-1.5h2v1.5Z"></path>
             </svg>
-            <p class="cConfigFontSize1p4RemWeight600 cTextColorBlack1">
+            <p class="cConfigFontSize1p4RemWeight600">
               Registrate con tu correo electrónico académico
             </p>
-          </a>
+          </button>
+        </div>
+        <div class="c_ModalRegisterForm_DivForm_RegisterAnotherWays cDispFlexColumnCenterAlignCenter" style="display: none;">
+          <div class="cDispFlexRowCenterAlignCenter">
+            <button class="cButtonTypeQuitDefaultStyle1" onclick="changeForm('c_ModalRegisterForm_DivForm_RegisterAnotherWays','c_ModalRegisterForm_DivForm_Content')">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="7 0 24 24">
+                <path fill="currentColor" fill-rule="evenodd" d="M15.45 17.97 9.5 12.01a.25.25 0 0 1 0-.36l5.87-5.87a.75.75 0 0 0-1.06-1.06l-5.87 5.87c-.69.68-.69 1.8 0 2.48l5.96 5.96a.75.75 0 0 0 1.06-1.06z"></path>
+              </svg>
+            </button>
+            <h3 class="cConfigFont3Prop1 cTextColorBlack2">
+              Ir a Canva
+            </h3>
+          </div>
+          <div class="c_ModalRegisterForm_DivForm_Content_DivButtons cDispFlexColumnCenterAlignCenter">
+            <button class="cButtonType4 cDispFlexRowCenterAlignCenter" onclick="openWindow_ModalRegisterForm_DivForm_Content_DivButtons(this)" data-url="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?state=670bc897-4af3-4d23-bb9d-570d7652466e&access_type=offline&prompt=consent&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&response_type=code&client_id=779010036194-lf6spugv22vvj41pqjdj4d8k2tq7o5fd.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.canva.com%2Foauth%2Fauthorized%2Fgoogle&service=lso&o2v=2&flowName=GeneralOAuthFlow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                <path fill="#4285f4" d="M386 400c45-42 65-112 53-179H260v74h102c-4 24-18 44-38 57z"></path>
+                <path fill="#34a853" d="M90 341a192 192 0 0 0 296 59l-62-48c-53 35-141 22-171-60z"></path>
+                <path fill="#fbbc02" d="M153 292c-8-25-8-48 0-73l-63-49c-23 46-30 111 0 171z"></path>
+                <path fill="#ea4335" d="M153 219c22-69 116-109 179-50l55-54c-78-75-230-72-297 55z"></path>
+              </svg>
+              <p class="cConfigFontSize1p4RemWeight600">
+                Usar Google
+              </p>
+              <svg class="circleSvg" width="24" height="24" viewBox="0 0 24 24">
+                <circle class="circleAnimation" cx="12" cy="12" r="8"></circle>
+              </svg>
+            </button>
+            <button class="cButtonType4 cDispFlexRowCenterAlignCenter" onclick="openWindow_ModalRegisterForm_DivForm_Content_DivButtons(this)" data-url="https://www.facebook.com/login.php?skip_api_login=1&api_key=525265914179580&kid_directed_site=0&app_id=525265914179580&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv11.0%2Fdialog%2Foauth%3Fstate%3D2e4d40df-8744-40d2-a9fd-9b5290cf072b%26scope%3Demail%252Cpublic_profile%26response_type%3Dcode%26client_id%3D525265914179580%26redirect_uri%3Dhttps%253A%252F%252Fwww.canva.com%252Foauth%252Fauthorized%252Ffacebook%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D9125efd2-c047-4c94-ad39-e2a8c95b7769%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.canva.com%2Foauth%2Fauthorized%2Ffacebook%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D2e4d40df-8744-40d2-a9fd-9b5290cf072b%23_%3D_&display=page&locale=es_ES&pl_dbl=0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="#1877f2" d="M21.5 12.058c0-5.28-4.253-9.558-9.5-9.558s-9.5 4.279-9.5 9.558c0 4.771 3.473 8.725 8.016 9.442v-6.68H8.104v-2.762h2.412V9.952c0-2.395 1.417-3.718 3.588-3.718 1.04 0 2.126.186 2.126.186v2.352h-1.198c-1.18 0-1.548.738-1.548 1.494v1.792h2.635l-.421 2.763h-2.214V21.5c4.543-.717 8.016-4.67 8.016-9.442z"></path>
+              </svg>
+              <p class="cConfigFontSize1p4RemWeight600">
+                Usar Facebook
+              </p>
+              <svg class="circleSvg" width="24" height="24" viewBox="0 0 24 24">
+                <circle class="circleAnimation" cx="12" cy="12" r="8"></circle>
+              </svg>
+            </button>
+            <button class="cButtonType4 cDispFlexRowCenterAlignCenter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" file-rule="evenodd" d="M20.37 5.03A2 2 0 0 1 22 7v10a2 2 0 0 1-1.96 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h16.1H4zm.13 2.07-4.53 5.31 4.53 4.63a.5.5 0 0 0 0-.04V7.1zm-17-.14a.5.5 0 0 0 0 .04v10a.5.5 0 0 0 0 .04l4.59-4.7L3.5 6.97zm5.57 6.53-3.92 4 13.7.01L15 13.56a4 4 0 0 1-5.93-.07zm9.88-6.99H5l5.07 5.96a2.5 2.5 0 0 0 3.81 0l5.07-5.96z"></path>
+              </svg>
+              <p class="cConfigFontSize1p4RemWeight600"> 
+                Usar mi correo
+              </p>
+            </button>
+            <button class="cButtonType4 cDispFlexRowCenterAlignCenter">
+              <p class="cConfigFontSize1p4RemWeight600 cTextColorBlack1">
+                Continuar de otra forma
+              </p>
+            </button>
+          </div>
+        </div>
+        <div class="c_ModalRegisterForm_DivForm_RegisterMail cDispFlexColumnCenterAlignCenter" style="display: none;">
+          <div class="cDispFlexRowCenterAlignCenter">
+            <button class="cButtonTypeQuitDefaultStyle1" onclick="changeForm('c_ModalRegisterForm_DivForm_RegisterMail','c_ModalRegisterForm_DivForm_Content')">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="7 0 24 24">
+                <path fill="currentColor" fill-rule="evenodd" d="M15.45 17.97 9.5 12.01a.25.25 0 0 1 0-.36l5.87-5.87a.75.75 0 0 0-1.06-1.06l-5.87 5.87c-.69.68-.69 1.8 0 2.48l5.96 5.96a.75.75 0 0 0 1.06-1.06z"></path>
+              </svg>
+            </button>
+            <h3 class="cConfigFont3Prop1 cTextColorBlack2">
+              Usar mi correo electrónico laboral
+            </h3>
+          </div>
+          <p class="cConfigFontSize1p4RemWeight600 cTextColorGray2" style="font-weight: 400;">
+            Usar tu correo electrónico laboral facilita el diseño en equipo.
+          </p>
+          <div class="c_ModalRegisterForm_DivForm_RegisterMail_InputForm cDispFlexColumnCenterAlignFlexStart">
+            <p class="cConfigFontSize1p2RemWeight600">
+              Correo laboral
+            </p>
+            <input type="text" placeholder="name@workemail.com" class="cConfigFontSize1p4RemWeight400">
+            <button class="cButtonType1">
+              Continuar
+            </button>
+          </div>
+        </div>
+        <div>
+          
         </div>
       </div>
       <div class="c_ModalRegisterForm_DivImg">
