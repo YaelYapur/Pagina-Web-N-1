@@ -151,16 +151,31 @@ function changeForm(form1Class, form2Class){
     const form1 = document.querySelector(`.${form1Class}`);
     const form2 = document.querySelector(`.${form2Class}`);
     console.log("asd2; ", form1,form2);
-    form2.getAttribute
     //
     form1.style.display = "none";
     form2.style.display = "flex";
     //
     if(form1Class == 'c_ModalRegisterForm_DivForm_Content' && form2Class == 'c_ModalRegisterForm_DivForm_RegisterAnotherWays'){
-        // c_ModalRegisterForm_DivForm_Content_DivButtons
-        const containerButtons = document.querySelector(`.${form1Class} .c_ModalRegisterForm_DivForm_Content_DivButtons`);
-        console.log("dawddafwaf: ", containerButtons);
-
+        //
+        const containerButtonsForm1 = document.querySelector(`.${form1Class} .c_ModalRegisterForm_DivForm_Content_DivButtons`);
+        const containerButtonsForm2 = document.querySelector(`.${form2Class} .c_ModalRegisterForm_DivForm_Content_DivButtons`);
+        //
+        const lenghtButtonsToReplace = containerButtonsForm1.childElementCount, arrayIndexOfReplace = [0, 1, 4];
+        for (let i = 0; i < lenghtButtonsToReplace; i++) {
+            //
+            containerButtonsForm2.children[arrayIndexOfReplace[i]].insertAdjacentElement("afterend", containerButtonsForm1.children[0]);
+        }
+    }
+    else if(form1Class == 'c_ModalRegisterForm_DivForm_RegisterAnotherWays' && form2Class == 'c_ModalRegisterForm_DivForm_Content'){
+        //
+        const containerButtonsForm1 = document.querySelector(`.${form1Class} .c_ModalRegisterForm_DivForm_Content_DivButtons`);
+        const containerButtonsForm2 = document.querySelector(`.${form2Class} .c_ModalRegisterForm_DivForm_Content_DivButtons`);
+        //
+        const lenghtButtonsToReplace = 3, arrayIndexOfReplace = [1, 1, 3];
+        for (let i = 0; i < lenghtButtonsToReplace; i++) {
+            //
+            containerButtonsForm2.appendChild(containerButtonsForm1.children[arrayIndexOfReplace[i]]);
+        }
     }
 }
 
@@ -169,39 +184,46 @@ function openWindow_ModalRegisterForm_DivForm_Content_DivButtons(elementButton){
     console.log("qwe: ",elementButton,elementButton.getAttribute("data-url"));
     //
     const openedWindow = window.open(elementButton.getAttribute("data-url"),"_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=500,height=600");
+    const svgLoading = document.getElementById("id_SvgLoading_ModalRegisterForm_DivForm");
     //
-    for (let i = 0; i < elementButton.children.length - 1; i++) {
-        elementButton.children[i].style.display = "none";
-    }
-    elementButton.lastElementChild.style.display = "block";
     elementButton.classList.add("stateFlag__Clicked__c_ModalRegisterForm_DivForm_Content_DivButtons");
     //
-    console.log("dewfefef", elementButton.parentElement.children);
-    for (const button of elementButton.parentElement.children) {
-        button.disabled = true;
+    for (let i = 0; i < elementButton.childElementCount; i++) {
+        elementButton.children[i].style.display = "none";
+    }
+    //
+    elementButton.appendChild(svgLoading);
+    svgLoading.style.display = "block";
+    //
+    const divButtonsContainers = document.querySelectorAll(".c_ModalRegisterForm_DivForm_Content_DivButtons");
+    for (const container of divButtonsContainers) {
+        for (const button of container.children) {
+            button.disabled = true;
+        }
     }
     //
     const timer = setInterval(() => {
         if (openedWindow.closed) {
             clearInterval(timer);
             //
-            for (let i = 0; i < elementButton.children.length - 1; i++) {
-                elementButton.children[i].style.display = "block";
-            }
-            elementButton.lastElementChild.style.display = "none";
             elementButton.classList.remove("stateFlag__Clicked__c_ModalRegisterForm_DivForm_Content_DivButtons");
             //
-            for (const button of elementButton.parentElement.children) {
-                button.disabled = false;
+            document.body.appendChild(svgLoading);
+            svgLoading.style.display = "none";
+            //
+            for (let i = 0; i < elementButton.childElementCount; i++) {
+                elementButton.children[i].style.display = "block";
+            }
+            //
+            for (const container of divButtonsContainers) {
+                for (const button of container.children) {
+                    button.disabled = false;
+                }
             }
         }
     }, 500);
 }
 
-function dasd(){
-    //
-    console.log("qfafas2: ",openedWindow, openedWindow.closed);
-}
 
 //---------------------------------------------------------------------------------------------------------------------------------------------//
 //-------------------------------------------------------Area de las funciones-----------------------------------------------------------------//

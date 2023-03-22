@@ -267,10 +267,6 @@ h1, h2, h3, h4, p{
   margin-right: 24px;
 }
 
-.c_ModalRegisterForm_DivForm_Content_DivButtons button svg.circleSvg{
-  display: none;
-}
-
 .c_ModalRegisterForm_DivForm_Content_DivButtons button:disabled{
   color: rgba(30,41,51,.45);
   cursor: not-allowed;
