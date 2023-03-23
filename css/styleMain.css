@@ -249,35 +249,9 @@ h1, h2, h3, h4, p{
   row-gap: 16px;
 }
 
-.c_ModalRegisterForm_DivForm_Content_DivButtons, .c_ModalRegisterForm_DivForm_Content_DivButtons button,
-.c_ModalRegisterForm_DivForm_Content > button:first-of-type{
-  width: 100%;
-}
-
-.c_ModalRegisterForm_DivForm_Content_DivButtons{
-  row-gap: 16px;
-}
-
-.c_ModalRegisterForm_DivForm_Content_DivButtons button:disabled:hover{
-  background-color: rgba(64,87,109,.07);
-}
-
-.c_ModalRegisterForm_DivForm_Content_DivButtons button p{
-  flex: 1 0 0;
-  margin-right: 24px;
-}
-
-.c_ModalRegisterForm_DivForm_Content_DivButtons button:disabled{
-  color: rgba(30,41,51,.45);
-  cursor: not-allowed;
-}
-
-.c_ModalRegisterForm_DivForm_Content_DivButtons button:disabled.stateFlag__Clicked__c_ModalRegisterForm_DivForm_Content_DivButtons{
-  cursor: wait;
-}
-
 .c_ModalRegisterForm_DivForm_Content > button:first-of-type{
   background-color: inherit;
+  width: 100%;
 }
 
 .c_ModalRegisterForm_DivForm_Content > button:first-of-type:hover{
@@ -302,16 +276,47 @@ h1, h2, h3, h4, p{
   margin-right: 8px;
 }
 
+.c_ModalRegisterForm_DivImg img{
+  width: 100%;
+}
+
+/**/
+.c_ModalRegisterForm_DivForm_gc_DivButtons, .c_ModalRegisterForm_DivForm_gc_DivButtons button{
+  width: 100%;
+}
+
+.c_ModalRegisterForm_DivForm_gc_DivButtons{
+  row-gap: 16px;
+}
+
+.c_ModalRegisterForm_DivForm_gc_DivButtons button:disabled:hover{
+  background-color: rgba(64,87,109,.07);
+}
+
+.c_ModalRegisterForm_DivForm_gc_DivButtons button p{
+  flex: 1 0 0;
+  margin-right: 24px;
+}
+
+.c_ModalRegisterForm_DivForm_gc_DivButtons button:disabled{
+  color: rgba(30,41,51,.45);
+  cursor: not-allowed;
+}
+
+.c_ModalRegisterForm_DivForm_gc_DivButtons button:disabled.stateFlag__Clicked__c_ModalRegisterForm_DivForm_gc_DivButtons{
+  cursor: wait;
+}
+
 .c_ModalRegisterForm_DivForm_gc_TitleButtonBack button svg{
   vertical-align: middle;
   margin-right: -8px;
 }
 
-.c_ModalRegisterForm_DivForm_RegisterMail_InputForm, .c_ModalRegisterForm_DivForm_RegisterMail_InputForm button{
+.c_ModalRegisterForm_DivForm_gc_InputRegtister, .c_ModalRegisterForm_DivForm_gc_InputRegtister button{
   width: 100%;
 }
 
-.c_ModalRegisterForm_DivForm_RegisterMail_InputForm input{
+.c_ModalRegisterForm_DivForm_gc_InputRegtister input{
   border-radius: 4px;
   border: 1px solid rgba(43,59,74,.3);
   box-sizing: border-box;
@@ -321,10 +326,6 @@ h1, h2, h3, h4, p{
   margin: 4px 0px 16px;
   padding: 0 0 0 10px;    
   outline: none;
-}
-
-.c_ModalRegisterForm_DivImg img{
-  width: 100%;
 }
 
 @media screen and (max-width: 900px) {

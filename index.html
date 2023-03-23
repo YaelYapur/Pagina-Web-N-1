@@ -181,7 +181,7 @@
           <p class="cConfigFont6Prop1 cTextColorGray2">
             Usá tu correo electrónico u otro servicio para continuar con Canva (¡es gratis!)
           </p>
-          <div class="c_ModalRegisterForm_DivForm_Content_DivButtons cDispFlexColumnCenterAlignCenter">
+          <div class="c_ModalRegisterForm_DivForm_gc_DivButtons cDispFlexColumnCenterAlignCenter">
             <button class="cButtonType4 cDispFlexRowCenterAlignCenter" onclick="openWindow_ModalRegisterForm_DivForm_Content_DivButtons(this)" data-url="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?state=670bc897-4af3-4d23-bb9d-570d7652466e&access_type=offline&prompt=consent&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&response_type=code&client_id=779010036194-lf6spugv22vvj41pqjdj4d8k2tq7o5fd.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.canva.com%2Foauth%2Fauthorized%2Fgoogle&service=lso&o2v=2&flowName=GeneralOAuthFlow">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
                 <path fill="#4285f4" d="M386 400c45-42 65-112 53-179H260v74h102c-4 24-18 44-38 57z"></path>
@@ -201,7 +201,7 @@
                 Usar Facebook
               </p>
             </button>
-            <button class="cButtonType4 cDispFlexRowCenterAlignCenter">
+            <button id="id_CorreoNormalButtonCF_ModalRegisterForm_DivForm" class="cButtonType4 cDispFlexRowCenterAlignCenter" onclick="changeForm('c_ModalRegisterForm_DivForm_Content','c_ModalRegisterForm_DivForm_RegisterMail',this)">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="currentColor" fill-rule="evenodd" d="M20.37 5.03A2 2 0 0 1 22 7v10a2 2 0 0 1-1.96 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h16.1H4zm.13 2.07-4.53 5.31 4.53 4.63a.5.5 0 0 0 0-.04V7.1zm-17-.14a.5.5 0 0 0 0 .04v10a.5.5 0 0 0 0 .04l4.59-4.7L3.5 6.97zm5.57 6.53-3.92 4 13.7.01L15 13.56a4 4 0 0 1-5.93-.07zm9.88-6.99H5l5.07 5.96a2.5 2.5 0 0 0 3.81 0l5.07-5.96z"></path>
               </svg>
@@ -210,7 +210,7 @@
               </p>
             </button>
           </div>
-          <button class="cButtonType4 cDispFlexRowCenterAlignCenter" onclick="changeForm('c_ModalRegisterForm_DivForm_Content','c_ModalRegisterForm_DivForm_RegisterAnotherWays')">
+          <button class="cButtonType4 cDispFlexRowCenterAlignCenter" onclick="changeForm('c_ModalRegisterForm_DivForm_Content','c_ModalRegisterForm_DivForm_RegisterAnotherWays',this)">
             <p class="cConfigFontSize1p4RemWeight600 cTextColorBlack1">
               Continuar de otra forma
             </p>
@@ -222,7 +222,7 @@
             <a href="https://www.canva.com/policies/privacy-policy/" target="_blank" style="color: inherit;">Política de privacidad</a>
             de Canva.
           </p>
-          <button class="c_ModalRegisterForm_DivForm_Content_FinalButton cDispFlexRowFlexStartAlignFlexStart" onclick="changeForm('c_ModalRegisterForm_DivForm_Content','c_ModalRegisterForm_DivForm_RegisterMail')">
+          <button id="id_CorreoAcademicoButtonCF_ModalRegisterForm_DivForm" class="c_ModalRegisterForm_DivForm_Content_FinalButton cDispFlexRowFlexStartAlignFlexStart" onclick="changeForm('c_ModalRegisterForm_DivForm_Content','c_ModalRegisterForm_DivForm_RegisterMail',this)">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path fill="currentColor" fill-rule="evenodd" d="M4 18.5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 1 .5-.5h6.5c.275 0 .5.225.5.5v13.5H4Zm8.5 1.497V20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6.5c1.102 0 2 .895 2 2v3.997h2L20 9c1.105 0 2 .892 2 2v7l-1.5-.001V11c0-.278-.222-.5-.5-.5l-3.126-.001-4.374-.002v8l7.5.003a.5.5 0 0 0 .5-.5H22a2 2 0 0 1-2 2l-7.5-.003ZM5 7.497h4.5v-1.5H5v1.5Zm0 3h4.5v-1.5H5v1.5Zm4.5 3H5v-1.5h4.5v1.5Zm-4.5 3h4.5v-1.5H5v1.5Zm11-3h-2v-1.5h2v1.5Zm0 3h-2v-1.5h2v1.5Zm3-3h-2v-1.5h2v1.5Zm0 3h-2v-1.5h2v1.5Z"></path>
             </svg>
@@ -233,7 +233,7 @@
         </div>
         <div class="c_ModalRegisterForm_DivForm_RegisterAnotherWays cDispFlexColumnCenterAlignFlexStart" style="display: none;">
           <div class="c_ModalRegisterForm_DivForm_gc_TitleButtonBack cDispFlexRowCenterAlignCenter">
-            <button class="cButtonTypeQuitDefaultStyle1" onclick="changeForm('c_ModalRegisterForm_DivForm_RegisterAnotherWays','c_ModalRegisterForm_DivForm_Content')">
+            <button class="cButtonTypeQuitDefaultStyle1" onclick="changeForm('c_ModalRegisterForm_DivForm_RegisterAnotherWays','c_ModalRegisterForm_DivForm_Content',this)">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="7 0 24 24">
                 <path fill="currentColor" fill-rule="evenodd" d="M15.45 17.97 9.5 12.01a.25.25 0 0 1 0-.36l5.87-5.87a.75.75 0 0 0-1.06-1.06l-5.87 5.87c-.69.68-.69 1.8 0 2.48l5.96 5.96a.75.75 0 0 0 1.06-1.06z"></path>
               </svg>
@@ -242,7 +242,7 @@
               Ir a Canva
             </h3>
           </div>
-          <div class="c_ModalRegisterForm_DivForm_Content_DivButtons cDispFlexColumnCenterAlignCenter">
+          <div class="c_ModalRegisterForm_DivForm_gc_DivButtons cDispFlexColumnCenterAlignCenter">
             <button class="cButtonType4 cDispFlexRowCenterAlignCenter" onclick="openWindow_ModalRegisterForm_DivForm_Content_DivButtons(this)" data-url="https://appleid.apple.com/auth/authorize?state=bc01b094-8f59-4a90-afc6-86f4e1a42e7b&response_mode=form_post&client_id=com.canva.web&scope=name%20email&response_type=code&redirect_uri=https%3A%2F%2Fwww.canva.com%2Foauth%2Fauthorized%2Fapple">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="#515154" d="M19.644 17.365a11.555 11.555 0 0 1-1.085 2.03c-.57.847-1.038 1.433-1.398 1.758-.558.534-1.156.808-1.797.823-.46 0-1.014-.136-1.659-.412-.647-.275-1.242-.411-1.786-.411-.571 0-1.183.136-1.838.411-.655.276-1.183.42-1.587.434-.614.027-1.226-.254-1.837-.845-.39-.354-.878-.96-1.462-1.82-.627-.918-1.142-1.982-1.546-3.195C3.217 14.828 3 13.558 3 12.33c0-1.408.292-2.621.878-3.639a5.26 5.26 0 0 1 1.838-1.934 4.802 4.802 0 0 1 2.485-.73c.488 0 1.127.157 1.922.466.793.31 1.302.466 1.525.466.166 0 .732-.184 1.69-.55.907-.339 1.671-.48 2.298-.424 1.698.143 2.974.84 3.822 2.094-1.518.957-2.27 2.298-2.255 4.019.014 1.34.481 2.455 1.4 3.34.415.41.88.728 1.397.954-.112.338-.23.662-.356.973zM15.749 1.42c0 1.05-.368 2.031-1.103 2.939-.887 1.079-1.96 1.702-3.124 1.604a3.406 3.406 0 0 1-.023-.398c0-1.008.422-2.087 1.17-2.97a4.53 4.53 0 0 1 1.427-1.114c.576-.292 1.12-.453 1.632-.481.015.14.021.28.021.42z"></path>
@@ -270,7 +270,7 @@
                 Usar Clever
               </p>
             </button>
-            <button class="cButtonType4 cDispFlexRowCenterAlignCenter">
+            <button id="id_CorreoLaboralButtonCF_ModalRegisterForm_DivForm" class="cButtonType4 cDispFlexRowCenterAlignCenter" onclick="changeForm('c_ModalRegisterForm_DivForm_RegisterAnotherWays','c_ModalRegisterForm_DivForm_RegisterMail',this)">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="currentColor" fill-rule="evenodd" d="M20.37 5.03A2 2 0 0 1 22 7v10a2 2 0 0 1-1.96 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h16.1H4zm.13 2.07-4.53 5.31 4.53 4.63a.5.5 0 0 0 0-.04V7.1zm-17-.14a.5.5 0 0 0 0 .04v10a.5.5 0 0 0 0 .04l4.59-4.7L3.5 6.97zm5.57 6.53-3.92 4 13.7.01L15 13.56a4 4 0 0 1-5.93-.07zm9.88-6.99H5l5.07 5.96a2.5 2.5 0 0 0 3.81 0l5.07-5.96z"></path>
               </svg>
@@ -278,7 +278,7 @@
                 Usar mi correo laboral
               </p>
             </button>
-            <button class="cButtonType4 cDispFlexRowCenterAlignCenter">
+            <button id="id_AccederCelularButtonCF_ModalRegisterForm_DivForm" class="cButtonType4 cDispFlexRowCenterAlignCenter" onclick="changeForm('c_ModalRegisterForm_DivForm_RegisterAnotherWays','c_ModalRegisterForm_DivForm_RegisterMail',this)">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="currentColor" fill-rule="evenodd" d="M8 4.5h8a.5.5 0 0 1 .5.5v1h-9V5a.5.5 0 0 1 .5-.5Zm-2 3V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V7.5Zm10.5 0V15h-9V7.5h9ZM7.5 19v-2.5h9V19a.5.5 0 0 1-.5.5H8a.5.5 0 0 1-.5-.5Zm3.5-1.5a.5.5 0 1 0 0 1h2a.5.5 0 0 0 0-1h-2Z"></path>
               </svg>
@@ -290,7 +290,7 @@
         </div>
         <div class="c_ModalRegisterForm_DivForm_RegisterMail cDispFlexColumnCenterAlignFlexStart" style="display: none;">
           <div class="c_ModalRegisterForm_DivForm_gc_TitleButtonBack cDispFlexRowCenterAlignCenter">
-            <button class="cButtonTypeQuitDefaultStyle1" onclick="changeForm('c_ModalRegisterForm_DivForm_RegisterMail','c_ModalRegisterForm_DivForm_Content')">
+            <button class="cButtonTypeQuitDefaultStyle1">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="7 0 24 24">
                 <path fill="currentColor" fill-rule="evenodd" d="M15.45 17.97 9.5 12.01a.25.25 0 0 1 0-.36l5.87-5.87a.75.75 0 0 0-1.06-1.06l-5.87 5.87c-.69.68-.69 1.8 0 2.48l5.96 5.96a.75.75 0 0 0 1.06-1.06z"></path>
               </svg>
@@ -302,7 +302,7 @@
           <p class="cConfigFontSize1p4RemWeight600 cTextColorGray2" style="font-weight: 400;">
             Usar tu correo electrónico laboral facilita el diseño en equipo.
           </p>
-          <div class="c_ModalRegisterForm_DivForm_RegisterMail_InputForm cDispFlexColumnCenterAlignFlexStart">
+          <div class="c_ModalRegisterForm_DivForm_gc_InputRegtister cDispFlexColumnCenterAlignFlexStart">
             <p class="cConfigFontSize1p2RemWeight600">
               Correo laboral
             </p>
@@ -311,9 +311,6 @@
               Continuar
             </button>
           </div>
-        </div>
-        <div>
-          
         </div>
       </div>
       <div class="c_ModalRegisterForm_DivImg">

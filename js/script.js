@@ -145,7 +145,7 @@ function showModal(){
     });
 }
 
-function changeForm(form1Class, form2Class){
+function changeForm(form1Class, form2Class, elementButtonClicked){
     //
     console.log("asd; ", `.${form1Class}`,`.${form2Class}`);
     const form1 = document.querySelector(`.${form1Class}`);
@@ -157,64 +157,123 @@ function changeForm(form1Class, form2Class){
     //
     if(form1Class == 'c_ModalRegisterForm_DivForm_Content' && form2Class == 'c_ModalRegisterForm_DivForm_RegisterAnotherWays'){
         //
-        const containerButtonsForm1 = document.querySelector(`.${form1Class} .c_ModalRegisterForm_DivForm_Content_DivButtons`);
-        const containerButtonsForm2 = document.querySelector(`.${form2Class} .c_ModalRegisterForm_DivForm_Content_DivButtons`);
+        const containerButtonsForm1 = document.querySelector(`.${form1Class} .c_ModalRegisterForm_DivForm_gc_DivButtons`);
+        const containerButtonsForm2 = document.querySelector(`.${form2Class} .c_ModalRegisterForm_DivForm_gc_DivButtons`);
         //
         const lenghtButtonsToReplace = containerButtonsForm1.childElementCount, arrayIndexOfReplace = [0, 1, 4];
         for (let i = 0; i < lenghtButtonsToReplace; i++) {
             //
+            containerButtonsForm1.children[0].setAttribute("onclick", "changeForm('c_ModalRegisterForm_DivForm_RegisterAnotherWays','c_ModalRegisterForm_DivForm_RegisterMail',this)");
             containerButtonsForm2.children[arrayIndexOfReplace[i]].insertAdjacentElement("afterend", containerButtonsForm1.children[0]);
         }
     }
     else if(form1Class == 'c_ModalRegisterForm_DivForm_RegisterAnotherWays' && form2Class == 'c_ModalRegisterForm_DivForm_Content'){
         //
-        const containerButtonsForm1 = document.querySelector(`.${form1Class} .c_ModalRegisterForm_DivForm_Content_DivButtons`);
-        const containerButtonsForm2 = document.querySelector(`.${form2Class} .c_ModalRegisterForm_DivForm_Content_DivButtons`);
+        const containerButtonsForm1 = document.querySelector(`.${form1Class} .c_ModalRegisterForm_DivForm_gc_DivButtons`);
+        const containerButtonsForm2 = document.querySelector(`.${form2Class} .c_ModalRegisterForm_DivForm_gc_DivButtons`);
         //
         const lenghtButtonsToReplace = 3, arrayIndexOfReplace = [1, 1, 3];
         for (let i = 0; i < lenghtButtonsToReplace; i++) {
             //
+            containerButtonsForm1.children[arrayIndexOfReplace[i]].setAttribute("onclick", "changeForm('c_ModalRegisterForm_DivForm_Content','c_ModalRegisterForm_DivForm_RegisterMail',this)");
             containerButtonsForm2.appendChild(containerButtonsForm1.children[arrayIndexOfReplace[i]]);
         }
+    }
+    else if(form2Class == 'c_ModalRegisterForm_DivForm_RegisterMail'){
+        //
+        let currentFormClassAncestor = "";
+        //
+        switch (elementButtonClicked.id) {
+            case "id_CorreoNormalButtonCF_ModalRegisterForm_DivForm":
+                //
+                currentFormClassAncestor = elementButtonClicked.parentElement.parentElement.getAttribute("class").split(' ')[0];
+                //
+                overWriteEventOnClickButtonBack = `changeForm('c_ModalRegisterForm_DivForm_RegisterMail','${currentFormClassAncestor}',this)`;
+                overWriteTextHTitle = "Usar tu correo";
+                overWriteTextPText = "Vamos a verificar si tenés una cuenta y, si no, podemos ayudarte a crear una.";
+                overWriteTextP2Text = "Correo (personal o laboral)";
+                overWriteTextPlaceHolderInput = "julie@example.com";
+                break;
+
+            case "id_CorreoAcademicoButtonCF_ModalRegisterForm_DivForm": 
+            case "id_CorreoLaboralButtonCF_ModalRegisterForm_DivForm":
+                //
+                if(elementButtonClicked.id == "id_CorreoAcademicoButtonCF_ModalRegisterForm_DivForm"){
+                    currentFormClassAncestor = "c_ModalRegisterForm_DivForm_Content";
+                }
+                else{
+                    currentFormClassAncestor = "c_ModalRegisterForm_DivForm_RegisterAnotherWays";
+                }
+                //
+                overWriteEventOnClickButtonBack = `changeForm('c_ModalRegisterForm_DivForm_RegisterMail','${currentFormClassAncestor}',this)`;
+                overWriteTextHTitle = "Usar mi correo electrónico laboral";
+                overWriteTextPText = "Usar tu correo electrónico laboral facilita el diseño en equipo.";
+                overWriteTextP2Text = "Correo laboral";
+                overWriteTextPlaceHolderInput = "name@workemail.com";
+                break;
+
+            case "id_AccederCelularButtonCF_ModalRegisterForm_DivForm": 
+                //
+                overWriteEventOnClickButtonBack = `changeForm('c_ModalRegisterForm_DivForm_RegisterMail','c_ModalRegisterForm_DivForm_RegisterAnotherWays',this)`;
+                overWriteTextHTitle = "Usar tu celular";
+                overWriteTextPText = "Vamos a verificar si ya tenés una cuenta. No podés registrarte con un número de teléfono celular en tu ubicación actual.";
+                overWriteTextP2Text = "Celular (personal o laboral)";
+                overWriteTextPlaceHolderInput = "Número de celular";
+                break;
+            default:
+                return;
+        }
+        //
+        const hButtonBack = form2.querySelector(".c_ModalRegisterForm_DivForm_gc_TitleButtonBack > button");
+        const hTitle = form2.querySelector(".c_ModalRegisterForm_DivForm_gc_TitleButtonBack > h3");
+        const pText = form2.querySelector(".c_ModalRegisterForm_DivForm_RegisterMail > p");
+        const p2Text = form2.querySelector(".c_ModalRegisterForm_DivForm_gc_InputRegtister > p");
+        const input = form2.querySelector(".c_ModalRegisterForm_DivForm_gc_InputRegtister > input");
+        //
+        hButtonBack.setAttribute("onclick", overWriteEventOnClickButtonBack);
+        hTitle.innerText = overWriteTextHTitle;
+        pText.innerText = overWriteTextPText;
+        p2Text.innerText = overWriteTextP2Text;
+        input.setAttribute("placeholder", overWriteTextPlaceHolderInput);
     }
 }
 
 function openWindow_ModalRegisterForm_DivForm_Content_DivButtons(elementButton){
-    //
-    console.log("qwe: ",elementButton,elementButton.getAttribute("data-url"));
-    //
+    //Se crean las constantes => 1) openedWindow: elemento ventana abierta, svgLoading: elemento Svg de animacion de carga
     const openedWindow = window.open(elementButton.getAttribute("data-url"),"_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=500,height=600");
     const svgLoading = document.getElementById("id_SvgLoading_ModalRegisterForm_DivForm");
-    //
-    elementButton.classList.add("stateFlag__Clicked__c_ModalRegisterForm_DivForm_Content_DivButtons");
-    //
+    //Se agrega al boton pulsado, una clase flag (bandera) para su activar sus estilos en CSS
+    elementButton.classList.add("stateFlag__Clicked__c_ModalRegisterForm_DivForm_gc_DivButtons");
+    //Se desactiva el display de todos los elementos hijos del boton pulsado
     for (let i = 0; i < elementButton.childElementCount; i++) {
         elementButton.children[i].style.display = "none";
     }
-    //
+    //Se establece el Svg de carga, como unico hijo del boton pulsado, ademas se activa su display
     elementButton.appendChild(svgLoading);
     svgLoading.style.display = "block";
-    //
-    const divButtonsContainers = document.querySelectorAll(".c_ModalRegisterForm_DivForm_Content_DivButtons");
+    //Se buscan todos los botones hijos de contenedores que provengan de la clase "c_ModalRegisterForm_DivForm_gc_DivButtons" para deshabilitarlos
+    const divButtonsContainers = document.querySelectorAll(".c_ModalRegisterForm_DivForm_gc_DivButtons");
     for (const container of divButtonsContainers) {
         for (const button of container.children) {
             button.disabled = true;
         }
     }
-    //
+    //Se genera un Timer de loop de 500ms, para tener una verificacion del estado de la ventana abierta
     const timer = setInterval(() => {
+        //Se verifica si la ventana abierta se ha cerrado
         if (openedWindow.closed) {
+            //Se elimina el timer generado
             clearInterval(timer);
-            //
-            elementButton.classList.remove("stateFlag__Clicked__c_ModalRegisterForm_DivForm_Content_DivButtons");
-            //
+            //Se remueve del boton pulsado, la clase flag (bandera)
+            elementButton.classList.remove("stateFlag__Clicked__c_ModalRegisterForm_DivForm_gc_DivButtons");
+            //Se quita el Svg de carga como hijo del boton pulsado, llevandolo al body, ademas se desactiva su display
             document.body.appendChild(svgLoading);
             svgLoading.style.display = "none";
-            //
+            //Se activa el display de todos los elementos hijos del boton pulsado
             for (let i = 0; i < elementButton.childElementCount; i++) {
                 elementButton.children[i].style.display = "block";
             }
-            //
+            //Se buscan todos los botones hijos de contenedores que provengan de la clase "c_ModalRegisterForm_DivForm_gc_DivButtons" para habilitarlos nuevamente
             for (const container of divButtonsContainers) {
                 for (const button of container.children) {
                     button.disabled = false;
@@ -223,7 +282,6 @@ function openWindow_ModalRegisterForm_DivForm_Content_DivButtons(elementButton){
         }
     }, 500);
 }
-
 
 //---------------------------------------------------------------------------------------------------------------------------------------------//
 //-------------------------------------------------------Area de las funciones-----------------------------------------------------------------//
